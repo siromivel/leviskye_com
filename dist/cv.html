@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Curriculum vitae for Levi Skye Morris, a technical executive, engineering leader, researcher, and field operator based in Boulder, Colorado."
+    >
+    <meta name="theme-color" content="#f2eee4">
+    <link rel="canonical" href="https://leviskye.com/cv">
+    <title>CV · Levi Skye Morris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f2eee4;
+        --ink: #17201d;
+        --muted: #5f675e;
+        --line: #c9c5b8;
+        --accent: #9f3f28;
+        --measure: 72rem;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 20rem;
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: var(--accent);
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.22em;
+      }
+
+      a:hover,
+      a:focus-visible {
+        color: var(--accent);
+      }
+
+      header,
+      main,
+      footer {
+        width: min(calc(100% - 3rem), var(--measure));
+        margin-inline: auto;
+      }
+
+      header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-block: 1.5rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wordmark {
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.25rem;
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
+
+      nav a[aria-current="page"] {
+        color: var(--accent);
+      }
+
+      .intro {
+        padding-block: clamp(4rem, 9vw, 8rem);
+      }
+
+      .eyebrow,
+      .section-label {
+        margin: 0;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 750;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 400;
+      }
+
+      h1 {
+        margin: 1.15rem 0 0;
+        font-size: clamp(3.25rem, 8vw, 6.5rem);
+        letter-spacing: -0.055em;
+        line-height: 0.95;
+      }
+
+      .role {
+        max-width: 50rem;
+        margin: 1.6rem 0 0;
+        font-size: clamp(1.15rem, 2.3vw, 1.65rem);
+        letter-spacing: -0.02em;
+        line-height: 1.4;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.2rem;
+        margin: 1.75rem 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .summary {
+        max-width: 58rem;
+        margin: 3rem 0 0;
+        font-size: 1.06rem;
+        line-height: 1.7;
+      }
+
+      .cv-section {
+        display: grid;
+        grid-template-columns: minmax(8rem, 13rem) 1fr;
+        gap: clamp(2rem, 7vw, 7rem);
+        padding-block: clamp(3.5rem, 7vw, 6rem);
+        border-top: 1px solid var(--line);
+      }
+
+      .section-content {
+        min-width: 0;
+      }
+
+      .strengths {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 3rem;
+      }
+
+      .strengths h2,
+      .skill-group h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.35rem;
+      }
+
+      .strengths p,
+      .skill-group p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .entry + .entry {
+        margin-top: 3.75rem;
+      }
+
+      .entry-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem 2rem;
+        align-items: baseline;
+      }
+
+      .entry h2 {
+        margin: 0;
+        font-size: clamp(1.55rem, 3vw, 2.15rem);
+        letter-spacing: -0.025em;
+      }
+
+      .entry-title {
+        margin: 0.5rem 0 0;
+        font-weight: 700;
+      }
+
+      .entry-meta {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+
+      .role-history {
+        display: grid;
+        gap: 0.25rem;
+        margin: 0.65rem 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      ul {
+        margin: 1.25rem 0 0;
+        padding-left: 1.25rem;
+      }
+
+      li {
+        padding-left: 0.35rem;
+        line-height: 1.65;
+      }
+
+      li + li {
+        margin-top: 0.65rem;
+      }
+
+      li::marker {
+        color: var(--accent);
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 3rem;
+      }
+
+      .education-line + .education-line {
+        margin-top: 2rem;
+      }
+
+      .education-line h2 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+
+      .education-line p {
+        margin: 0.55rem 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-block: 1.5rem 2.5rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 48rem) {
+        .cv-section {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .entry-header {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+
+        .entry-meta {
+          white-space: normal;
+        }
+      }
+
+      @media (max-width: 38rem) {
+        header {
+          align-items: center;
+        }
+
+        .strengths,
+        .skills {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        :root {
+          --paper: #fff;
+          --ink: #000;
+          --muted: #333;
+          --line: #aaa;
+        }
+
+        header,
+        footer {
+          display: none;
+        }
+
+        main {
+          width: 100%;
+        }
+
+        .intro,
+        .cv-section {
+          padding-block: 1.5rem;
+        }
+
+        .entry,
+        .skill-group,
+        .education-line {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="/">Levi Skye Morris</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/cv" aria-current="page">CV</a>
+        <a href="https://github.com/siromivel" rel="me">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="cv-heading">
+        <p class="eyebrow">Curriculum vitae</p>
+        <h1 id="cv-heading">Levi Skye Morris</h1>
+        <p class="role">Technical executive · Engineering leader · Systems architect</p>
+        <div class="contact" aria-label="Contact information">
+          <span>Boulder, Colorado</span>
+          <a href="mailto:siromivel@gmail.com">siromivel@gmail.com</a>
+          <a href="https://github.com/siromivel" rel="me">github.com/siromivel</a>
+        </div>
+        <p class="summary">
+          Technical executive and hands-on engineering leader with 11+ years building
+          customer-facing and infrastructure products across financial technology,
+          healthcare, e-commerce, and distributed systems. Promoted from senior engineer
+          to CTO after inheriting engineering leadership; led a globally distributed
+          organization while remaining close to architecture, product decisions,
+          reliability, and high-risk technical work.
+        </p>
+      </section>
+
+      <section class="cv-section" aria-labelledby="strengths-heading">
+        <p class="section-label" id="strengths-heading">Core strengths</p>
+        <div class="section-content strengths">
+          <div>
+            <h2>Leadership</h2>
+            <p>
+              Technical strategy, architecture, engineering organization leadership,
+              hiring, coaching, performance management, distributed teams, and
+              cross-functional partnership.
+            </p>
+          </div>
+          <div>
+            <h2>Systems</h2>
+            <p>
+              Payments, customer-facing applications, platform reliability, incident
+              response, performance engineering, sensitive data, and applied cryptography.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="experience-heading">
+        <p class="section-label" id="experience-heading">Experience</p>
+        <div class="section-content">
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>SpankChain</h2>
+                <p class="entry-title">Chief Technology Officer</p>
+              </div>
+              <p class="entry-meta">Remote · Apr 2019–Mar 2026</p>
+            </div>
+            <div class="role-history" aria-label="Roles at SpankChain">
+              <span>Chief Technology Officer · Jul 2020–Mar 2026</span>
+              <span>Acting Head of Engineering · Dec 2019–Jul 2020</span>
+              <span>Senior Software Engineer · Apr 2019–Dec 2019</span>
+            </div>
+            <ul>
+              <li>
+                Promoted from senior engineer through engineering leadership to CTO. Led an
+                internal 8–10-person engineering organization distributed across five
+                countries and a 10-person contract product team based in Argentina; together,
+                the teams built and maintained three distinct products.
+              </li>
+              <li>
+                Owned recruiting, hiring, onboarding, coaching, performance management,
+                organizational change, and termination decisions across internal and
+                contracted product teams.
+              </li>
+              <li>
+                Set technical direction across customer-facing applications, backend
+                services, payment workflows, data systems, and blockchain infrastructure
+                while remaining hands-on with difficult implementation and production
+                problems across the stack.
+              </li>
+              <li>
+                Worked directly with product designers and commercial stakeholders to define
+                user flows, resolve product and technical tradeoffs, and carry customer-facing
+                features from concept through production.
+              </li>
+              <li>
+                Owned payment and settlement systems processing seven figures in transaction
+                volume, including banking integrations, KYC/AML controls, security,
+                reliability, and incident response.
+              </li>
+              <li>
+                Maintained 99.9% platform uptime through banking disruption, product
+                de-platforming, and changing regulatory requirements; sustained approximately
+                80% core-team retention through a major product sunset and restructuring.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>CampSpot</h2>
+                <p class="entry-title">Senior Software Engineer</p>
+              </div>
+              <p class="entry-meta">Denver, Colorado · Sep 2017–Feb 2019</p>
+            </div>
+            <ul>
+              <li>
+                Architected and built a custom payment-processing system, including
+                third-party integrations, transaction workflows, operational failure
+                handling, and PCI-compliant treatment of payment data.
+              </li>
+              <li>
+                Developed and scaled customer-facing reservation and payment systems using
+                Java, Kotlin, TypeScript, Dropwizard, Node.js, MySQL, and React.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>DocNetwork / CampDoc</h2>
+                <p class="entry-title">Development Team Lead</p>
+              </div>
+              <p class="entry-meta">Ann Arbor, Michigan · Aug 2015–Jun 2017</p>
+            </div>
+            <ul>
+              <li>
+                Led a 3–5-person engineering team building a HIPAA/FERPA-compliant
+                electronic health record and registration platform for pediatric and
+                educational organizations.
+              </li>
+              <li>
+                Led engineering as monthly payment volume grew from six figures to seven
+                figures, balancing delivery with privacy, security, data integrity, and
+                operational health.
+              </li>
+              <li>
+                Resolved severe PostgreSQL performance bottlenecks through query-plan
+                analysis, indexing, recursive CTEs, and data-model changes.
+              </li>
+              <li>
+                Built end-to-end product features from requirements through production using
+                TypeScript, Node.js, and Angular.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>SearchSpring</h2>
+                <p class="entry-title">Integration Specialist</p>
+              </div>
+              <p class="entry-meta">Colorado Springs, Colorado · Nov 2014–Aug 2015</p>
+            </div>
+            <ul>
+              <li>
+                Built production e-commerce search integrations for Shopify, Magento,
+                NetSuite, and BigCommerce using JavaScript, HTML, and CSS.
+              </li>
+              <li>
+                Configured search relevance and diagnosed integration and production issues
+                using Elasticsearch, Logstash, and Kibana.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>Gelada Research Project</h2>
+                <p class="entry-title">Field Site Manager</p>
+              </div>
+              <p class="entry-meta">Simien Mountains, Ethiopia · Jun 2012–Jan 2014</p>
+            </div>
+            <ul>
+              <li>
+                Managed personnel, logistics, safety, resource allocation, and research data
+                collection at a remote, high-altitude biological field station under
+                substantial operational, financial, and physical constraints.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="projects-heading">
+        <p class="section-label" id="projects-heading">Selected work</p>
+        <div class="section-content">
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>Wildfire risk and edge photogrammetry</h2>
+                <p class="entry-title">Technical and business exploration</p>
+              </div>
+              <p class="entry-meta">2026</p>
+            </div>
+            <ul>
+              <li>
+                Evaluated a localized wildfire-risk assessment service integrating
+                structural, topographic, vegetation, and Home Ignition Zone observations.
+              </li>
+              <li>
+                Designed edge-computing photogrammetry and combined UAV plus on-foot data-collection
+                workflows for rapid 3D rendering and conservative field risk reporting.
+              </li>
+              <li>
+                Built a structured reporting pipeline using constrained local inference and
+                an independent auditing agent to translate JSON observations into
+                human-readable risk language.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <div>
+                <h2>Computational ecology</h2>
+                <p class="entry-title">Clojure and scientific computing</p>
+              </div>
+              <p class="entry-meta">2026</p>
+            </div>
+            <ul>
+              <li>
+                Implemented configurable Ricker population models in Clojure with automated
+                detection of equilibria, oscillations, and chaotic dynamics, plus Vega-Lite
+                visualizations.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="skills-heading">
+        <p class="section-label" id="skills-heading">Technical expertise</p>
+        <div class="section-content skills">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>TypeScript, JavaScript, Java, Kotlin, Clojure, Python, SQL, Solidity, Vyper, R</p>
+          </div>
+          <div class="skill-group">
+            <h3>Product and web</h3>
+            <p>React, Angular, Vue, Node.js, NestJS, Express, Dropwizard, HTML, CSS</p>
+          </div>
+          <div class="skill-group">
+            <h3>Data</h3>
+            <p>PostgreSQL, MySQL, Redis, MongoDB, Elasticsearch, Logstash, Kibana</p>
+          </div>
+          <div class="skill-group">
+            <h3>Infrastructure</h3>
+            <p>AWS, GCP, Kubernetes, Docker, Terraform, Linux, KVM/QEMU</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI and agentic systems</h3>
+            <p>Local inference, constrained generation, auditing agents, structured reporting pipelines</p>
+          </div>
+          <div class="skill-group">
+            <h3>Risk and compliance</h3>
+            <p>PCI, HIPAA, FERPA, KYC/AML systems, security, privacy, and incident response</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="education-heading">
+        <p class="section-label" id="education-heading">Education and recognition</p>
+        <div class="section-content">
+          <div class="education-line">
+            <h2>University of Michigan</h2>
+            <p>B.S., Evolutionary Anthropology · 2012</p>
+          </div>
+          <div class="education-line">
+            <h2>National Science Foundation</h2>
+            <p>Graduate Research Fellowship Program, Honorable Mention · 2014</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>Built with love in Boulder County, Colorado</small></p>
+    </footer>
+  </body>
+</html>
