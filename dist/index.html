@@ -94,6 +94,7 @@
     display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.5vw, 18px); margin: 0; padding: 0; list-style: none;
   }
   .gallery li { margin: 0; }
+  .gallery li.w6 { grid-column: span 6; }
   .gallery li.w4 { grid-column: span 4; }
   .gallery li.w3 { grid-column: span 3; }
   .gallery li.w2 { grid-column: span 2; }
@@ -156,14 +157,17 @@
 
   <section id="photographs" aria-labelledby="photos-title">
     <div class="gallery-head">
-      <h2 id="photos-title">Photographs</h2>
+      <h2 id="photos-title">Photography</h2>
       <p>Wildlife, from far away and close to home.</p>
     </div>
     <ul class="gallery">
+      <li class="w6"><figure style="margin:0"><button data-full="img/pika.jpg" aria-label="Open: Pika"><img src="img/pika.jpg" alt="An American pika in the alpine tundra of Colorado" style="--ar:16/9" loading="lazy"></button><figcaption>American pika</figcaption></figure></li>
       <li class="w4"><figure style="margin:0"><button data-full="img/cubs.jpg" aria-label="Open: Lion cubs"><img src="img/cubs.jpg" alt="Two lion cubs curled together in the grass, one looking straight at the camera" style="--ar:3/2" loading="lazy"></button><figcaption>Lion cubs</figcaption></figure></li>
       <li class="w2"><figure style="margin:0"><button data-full="img/roller.jpg" aria-label="Open: Lilac-breasted roller"><img src="img/roller.jpg" alt="A lilac-breasted roller perched on a thorny branch against dry grass" style="--ar:3/4;object-position:25% 50%" loading="lazy"></button><figcaption>Lilac-breasted roller</figcaption></figure></li>
       <li class="w3"><figure style="margin:0"><button data-full="img/hippo.jpg" aria-label="Open: Hippopotamus"><img src="img/hippo.jpg" alt="A hippopotamus in the water with its mouth wide open, tusks showing" style="--ar:4/3" loading="lazy"></button><figcaption>Hippopotamus</figcaption></figure></li>
       <li class="w3"><figure style="margin:0"><button data-full="img/fox.jpg" aria-label="Open: Red fox"><img src="img/fox.jpg" alt="A red fox standing in green grass, looking back at the camera" style="--ar:4/3" loading="lazy"></button><figcaption>Red fox</figcaption></figure></li>
+      <li class="w2"><figure style="margin:0"><button data-full="img/silver-fox.jpg" aria-label="Open: Silver fox"><img src="img/silver-fox.jpg" alt="A silver fox sitting on a gravel path" style="--ar:3/4" loading="lazy"></button><figcaption>Silver fox</figcaption></figure></li>
+      <li class="w4"><figure style="margin:0"><button data-full="img/foxes-grooming.jpg" aria-label="Open: Foxes grooming"><img src="img/foxes-grooming.jpg" alt="Two subadult foxes, one grooming the other after a storm." style="--ar:3/2" loading="lazy"></button><figcaption>Subadult foxes grooming</figcaption></figure></li>
       <li class="w4"><figure style="margin:0"><button data-full="img/monk-seals.jpg" aria-label="Open: Monk seals"><img src="img/monk-seals.jpg" alt="Two monk seals nose to nose on a sandy beach at the water's edge" style="--ar:3/2" loading="lazy"></button><figcaption>Monk seals</figcaption></figure></li>
       <li class="w2"><figure style="margin:0"><button data-full="img/crater-lion.jpg" aria-label="Open: Lion beneath the crater rim"><img src="img/crater-lion.jpg" alt="A lion sitting in dry grass beneath a cloud-covered crater wall" style="--ar:3/4;object-position:28% 50%" loading="lazy"></button><figcaption>Lion beneath the crater rim</figcaption></figure></li>
     </ul>
