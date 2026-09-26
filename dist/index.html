@@ -1,250 +1,199 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Levi Skye Morris is an engineer, researcher, and field operator working across software, evolutionary biology, and conservation."
-    >
-    <meta name="theme-color" content="#f2eee4">
-    <link rel="canonical" href="https://leviskye.com">
-    <title>Levi Skye Morris</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --paper: #f2eee4;
-        --ink: #17201d;
-        --muted: #5f675e;
-        --line: #c9c5b8;
-        --accent: #9f3f28;
-        --measure: 72rem;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-        font-synthesis: none;
-      }
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Levi Skye Morris</title>
+<meta name="description" content="Engineering leader and former CTO in Boulder County, Colorado. Fractional technical leadership for mission-driven teams, and wildlife photography.">
+<link rel="canonical" href="https://leviskye.com">
+<!-- Social preview: point og:image at a hosted copy of the hero photo -->
+<meta property="og:title" content="Levi Skye Morris">
+<meta property="og:description" content="Engineering leader and former CTO in Boulder County, Colorado.">
+<meta property="og:image" content="https://leviskye.com/img/crater-lion.jpg">
+<meta property="og:url" content="https://leviskye.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e9ece9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cloud: #e9ece9;      /* the cloud bank */
+    --paper: #f5f6f4;
+    --slate: #26312d;      /* crater slope in shadow */
+    --slate-soft: #4c5a54;
+    --grass: #9c7433;      /* dry savanna grass */
+    --lagoon: #3f6f6b;     /* shallow reef water */
+    --rule: #cfd5d1;
+    --bg: var(--paper);
+    --fg: var(--slate);
+    --muted: var(--slate-soft);
+    --link: var(--lagoon);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b2320; --fg: #e3e8e4; --muted: #a9b5af; --link: #8fc2bc; --rule: #34413c; --grass: #d1a660;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b2320; --fg: #e3e8e4; --muted: #a9b5af; --link: #8fc2bc; --rule: #34413c; --grass: #d1a660;
+  }
 
-      * {
-        box-sizing: border-box;
-      }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: "Literata", Georgia, serif; font-size: 1.125rem; line-height: 1.65;
+    font-optical-sizing: auto;
+  }
+  a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--grass); outline-offset: 3px; }
 
-      html {
-        scroll-behavior: smooth;
-      }
+  /* Hero: the crater photo, with the name sitting in the cloud bank */
+  .hero {
+    position: relative; min-height: min(74vw, 94vh); display: flex; align-items: flex-start;
+    background:
+      linear-gradient(to bottom, rgba(233,236,233,0.88) 0, rgba(233,236,233,0.55) 22%, rgba(233,236,233,0) 44%),
+      var(--cloud) url("img/crater-lion.jpg") 30% 85% / cover no-repeat;
+  }
+  .hero-text {
+    width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(28px, 6vh, 72px) clamp(16px, 4vw, 48px) 0;
+  }
+  .hero h1 {
+    margin: 0; color: #1f2a26; font-weight: 350; letter-spacing: -0.02em; line-height: 0.95;
+    font-size: clamp(2.8rem, 8.5vw, 7.5rem);
+  }
+  .hero-text p {
+    margin: 0.6em 0 0; max-width: 30ch; color: #2d3934; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.4;
+  }
+  .credit {
+    position: absolute; right: clamp(16px, 4vw, 48px); bottom: 14px; margin: 0;
+    font-size: 0.8rem; color: rgba(255,255,255,0.85); text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  }
 
-      body {
-        min-width: 20rem;
-        margin: 0;
-        color: var(--ink);
-        background: var(--paper);
-      }
+  main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
 
-      a {
-        color: inherit;
-        text-decoration-color: var(--accent);
-        text-decoration-thickness: 0.1em;
-        text-underline-offset: 0.22em;
-      }
+  .intro {
+    display: grid; grid-template-columns: minmax(0, 38rem) auto; gap: 2rem 4rem; align-items: start;
+    padding: clamp(40px, 8vw, 88px) 0 clamp(32px, 6vw, 64px); border-bottom: 1px solid var(--rule);
+  }
+  .intro p { margin: 0 0 1em; }
+  .intro p:last-child { margin-bottom: 0; }
+  .intro .lead { font-size: clamp(1.25rem, 2.4vw, 1.5rem); line-height: 1.45; font-weight: 400; }
+  .links { list-style: none; margin: 0.35rem 0 0; padding: 0; display: grid; gap: 0.6rem; font-size: 1.05rem; }
+  .links a { text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 0.15rem; }
+  .links a:hover { border-bottom-color: var(--link); }
 
-      a:hover,
-      a:focus-visible {
-        color: var(--accent);
-      }
+  .gallery-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding: clamp(40px, 7vw, 72px) 0 1.25rem; }
+  .gallery-head h2 { margin: 0; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.01em; }
+  .gallery-head p { margin: 0; color: var(--muted); font-size: 0.98rem; }
 
-      header,
-      main,
-      footer {
-        width: min(calc(100% - 3rem), var(--measure));
-        margin-inline: auto;
-      }
+  /* Editorial grid: images keep their own proportions */
+  .gallery {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.5vw, 18px); margin: 0; padding: 0; list-style: none;
+  }
+  .gallery li { margin: 0; }
+  .gallery li.w4 { grid-column: span 4; }
+  .gallery li.w3 { grid-column: span 3; }
+  .gallery li.w2 { grid-column: span 2; }
+  .gallery button {
+    all: unset; display: block; width: 100%; cursor: zoom-in; border-radius: 2px;
+  }
+  .gallery button:focus-visible { outline: 2px solid var(--grass); outline-offset: 4px; }
+  .gallery img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: var(--ar, 3/2); border-radius: 2px; }
+  .gallery figcaption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--muted); }
 
-      header {
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-end;
-        padding-block: 1.5rem;
-        border-bottom: 1px solid var(--line);
-      }
+  footer { max-width: 1180px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 48px) 40px; color: var(--muted); font-size: 0.95rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
-      .wordmark {
-        font-weight: 700;
-        letter-spacing: -0.025em;
-      }
+  /* Lightbox */
+  dialog { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; }
+  dialog::backdrop { background: rgba(17, 22, 20, 0.92); }
+  dialog img { display: block; max-width: 96vw; max-height: 86vh; object-fit: contain; }
+  dialog p { margin: 0.6rem 0 0; color: #dfe5e1; font-size: 0.95rem; display: flex; justify-content: space-between; gap: 1rem; }
+  dialog button { all: unset; cursor: pointer; color: #dfe5e1; text-decoration: underline; text-underline-offset: 0.2em; }
+  dialog button:focus-visible { outline: 2px solid #d1a660; outline-offset: 3px; }
 
-      nav {
-        display: flex;
-        gap: 1.25rem;
-        font-size: 0.9rem;
-      }
+  @media (max-width: 760px) {
+    .hero { min-height: 78vh; background-position: 22% 30%; }
+    .intro { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .gallery li.w4, .gallery li.w3, .gallery li.w2 { grid-column: span 2; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero h1, .hero-text p { animation: settle 1.4s ease-out both; }
+    .hero-text p { animation-delay: 0.25s; }
+    @keyframes settle { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
 
-      nav a {
-        text-decoration: none;
-      }
+<header class="hero" role="img" aria-label="A male lion sitting in dry grass beneath a crater wall, with a bank of cloud pouring over the rim">
+  <div class="hero-text">
+    <h1>Levi Skye Morris</h1>
+    <p>Engineer, leader, and photographer in Boulder County, Colorado.</p>
+  </div>
+  <p class="credit">Lion beneath the crater rim</p>
+</header>
 
-      .hero {
-        display: grid;
-        min-height: 70vh;
-        align-content: center;
-        padding-block: clamp(5rem, 12vw, 10rem);
-      }
+<main>
+  <section class="intro" aria-label="About">
+    <div>
+      <p class="lead">I spent six years as a CTO building payment and compliance systems that had to stay up through almost anything, and the years before that building healthcare, e-commerce, and booking platforms.</p>
+      <p>Now I help mission-driven teams, in climate, disaster resilience, health, and impact work, build reliable systems and healthy engineering organizations, a few days a week. The rest of my time goes to the mountains, my garden, the French horn, and patrol rides with the Boulder Mountain Bike Patrol.</p>
+      <p>If your team could use a hand, <a href="mailto:siromivel@gmail.com">email me</a>.</p>
+    </div>
+    <nav aria-label="Elsewhere">
+      <ul class="links">
+        <li><a href="/cv">Work &amp; CV</a></li>
+        <li><a href="#photographs">Photographs</a></li>
+        <li><a href="https://github.com/siromivel">GitHub</a></li>
+        <li><a href="mailto:siromivel@gmail.com">siromivel@gmail.com</a></li>
+      </ul>
+    </nav>
+  </section>
 
-      .eyebrow {
-        margin: 0 0 1.25rem;
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 750;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
+  <section id="photographs" aria-labelledby="photos-title">
+    <div class="gallery-head">
+      <h2 id="photos-title">Photographs</h2>
+      <p>Wildlife, from far away and close to home.</p>
+    </div>
+    <ul class="gallery">
+      <li class="w4"><figure style="margin:0"><button data-full="img/cubs.jpg" aria-label="Open: Lion cubs"><img src="img/cubs.jpg" alt="Two lion cubs curled together in the grass, one looking straight at the camera" style="--ar:3/2" loading="lazy"></button><figcaption>Lion cubs</figcaption></figure></li>
+      <li class="w2"><figure style="margin:0"><button data-full="img/roller.jpg" aria-label="Open: Lilac-breasted roller"><img src="img/roller.jpg" alt="A lilac-breasted roller perched on a thorny branch against dry grass" style="--ar:3/4;object-position:25% 50%" loading="lazy"></button><figcaption>Lilac-breasted roller</figcaption></figure></li>
+      <li class="w3"><figure style="margin:0"><button data-full="img/hippo.jpg" aria-label="Open: Hippopotamus"><img src="img/hippo.jpg" alt="A hippopotamus in the water with its mouth wide open, tusks showing" style="--ar:4/3" loading="lazy"></button><figcaption>Hippopotamus</figcaption></figure></li>
+      <li class="w3"><figure style="margin:0"><button data-full="img/fox.jpg" aria-label="Open: Red fox"><img src="img/fox.jpg" alt="A red fox standing in green grass, looking back at the camera" style="--ar:4/3" loading="lazy"></button><figcaption>Red fox</figcaption></figure></li>
+      <li class="w4"><figure style="margin:0"><button data-full="img/monk-seals.jpg" aria-label="Open: Monk seals"><img src="img/monk-seals.jpg" alt="Two monk seals nose to nose on a sandy beach at the water's edge" style="--ar:3/2" loading="lazy"></button><figcaption>Monk seals</figcaption></figure></li>
+      <li class="w2"><figure style="margin:0"><button data-full="img/crater-lion.jpg" aria-label="Open: Lion beneath the crater rim"><img src="img/crater-lion.jpg" alt="A lion sitting in dry grass beneath a cloud-covered crater wall" style="--ar:3/4;object-position:28% 50%" loading="lazy"></button><figcaption>Lion beneath the crater rim</figcaption></figure></li>
+    </ul>
+  </section>
+</main>
 
-      h1 {
-        max-width: 15ch;
-        margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(3.25rem, 9vw, 7.5rem);
-        font-weight: 400;
-        letter-spacing: -0.055em;
-        line-height: 0.91;
-      }
+<footer>
+  <span>Boulder County, Colorado</span>
+  <span>Photographs © Levi Skye Morris</span>
+</footer>
 
-      .thesis {
-        max-width: 52rem;
-        margin: clamp(2rem, 5vw, 3.5rem) 0 0;
-        font-size: clamp(1.25rem, 2.5vw, 2rem);
-        letter-spacing: -0.025em;
-        line-height: 1.35;
-      }
+<dialog id="lightbox" aria-label="Photograph">
+  <img id="lb-img" alt="">
+  <p><span id="lb-cap"></span><button id="lb-close">Close</button></p>
+</dialog>
 
-      .work {
-        padding-block: 5rem 7rem;
-        border-top: 1px solid var(--line);
-      }
-
-      .section-heading {
-        margin: 0 0 3rem;
-        font-size: 0.78rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      .areas {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: clamp(2rem, 5vw, 5rem);
-      }
-
-      .area {
-        border-top: 2px solid var(--ink);
-        padding-top: 1.25rem;
-      }
-
-      h2 {
-        margin: 0 0 1rem;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1.6rem, 3vw, 2.25rem);
-        font-weight: 400;
-        letter-spacing: -0.025em;
-      }
-
-      .area p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.65;
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        padding-block: 1.5rem 2.5rem;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 0.88rem;
-      }
-
-      footer p {
-        margin: 0;
-      }
-
-      @media (max-width: 44rem) {
-        header {
-          align-items: center;
-        }
-
-        .in-page {
-          display: none;
-        }
-
-        .hero {
-          min-height: 66vh;
-        }
-
-        .areas {
-          grid-template-columns: 1fr;
-        }
-
-        footer {
-          display: grid;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="cv.html">CV</a>
-        <a href="https://github.com/siromivel" rel="me">GitHub</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="hero-heading">
-        <p class="eyebrow">Builder · Leader · Operator</p>
-        <h1 id="hero-heading">Levi Skye Morris</h1>
-        <p class="thesis">
-          I build accountable systems for high-stakes decisions, particularly where empirical evidence must overcome institutional failure.
-        </p>
-      </section>
-
-      <section class="work" id="work" aria-labelledby="work-heading">
-        <h2 class="section-heading" id="work-heading">Areas of work</h2>
-        <div class="areas">
-          <article class="area">
-            <h2>Software</h2>
-            <p>
-              Engineering and leadership building durable systems for health, payments,
-              and other domains where failure carries real costs.
-            </p>
-          </article>
-
-          <article class="area">
-            <h2>Research</h2>
-            <p>
-              Computational approaches to evolution and ecology, with an emphasis on
-              drawing defensible conclusions from imperfect evidence.
-            </p>
-          </article>
-
-          <article class="area">
-            <h2>Fieldwork</h2>
-            <p>
-              Experience operating biological research in Ethiopia, now directed
-              toward conservation and human–wildlife systems in the American West.
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p><small>Built with love in Boulder County, Colorado</small></p>
-    </footer>
-  </body>
+<script>
+  const dlg = document.getElementById('lightbox');
+  const img = document.getElementById('lb-img');
+  const cap = document.getElementById('lb-cap');
+  document.querySelectorAll('.gallery button').forEach(b => {
+    b.addEventListener('click', () => {
+      const thumb = b.querySelector('img');
+      img.src = b.dataset.full; img.alt = thumb.alt;
+      cap.textContent = b.closest('figure').querySelector('figcaption').textContent;
+      dlg.showModal();
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
 </html>
