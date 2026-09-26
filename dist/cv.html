@@ -166,6 +166,11 @@
         list-style: none;
       }
 
+      .download {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
       .summary {
         max-width: 44rem;
         margin: 2.5rem 0 0;
@@ -253,15 +258,17 @@
       }
 
       .titles {
+        display: grid;
+        grid-template-columns: max-content auto;
+        align-items: baseline;
+        gap: 0.1rem 1.5rem;
         margin: 0.5rem 0 0;
         padding: 0;
         list-style: none;
       }
 
       .titles li {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 0.6rem;
+        display: contents;
         color: var(--muted);
         font-size: 0.93rem;
       }
@@ -276,11 +283,6 @@
         font-weight: 400;
         font-variant-numeric: tabular-nums;
         color: var(--muted);
-      }
-
-      .titles time::before {
-        content: "·";
-        margin-right: 0.6rem;
       }
 
       .points {
@@ -357,16 +359,13 @@
           gap: 1rem;
         }
 
-        .titles li {
-          flex-direction: column;
+        .titles {
+          grid-template-columns: 1fr;
+          row-gap: 0;
         }
 
-        .titles li + li {
-          margin-top: 0.25rem;
-        }
-
-        .titles time::before {
-          content: none;
+        .titles li + li span {
+          margin-top: 0.35rem;
         }
       }
 
@@ -394,7 +393,8 @@
         }
 
         .site-header,
-        .site-footer {
+        .site-footer,
+        .no-print {
           display: none;
         }
 
@@ -563,6 +563,9 @@
           <li><a href="mailto:siromivel@gmail.com">siromivel@gmail.com</a></li>
           <li><a href="https://github.com/siromivel" rel="me">github.com/siromivel</a></li>
           <li><a href="https://leviskye.com">leviskye.com</a></li>
+          <li class="no-print">
+            <a class="download" href="/Levi_Skye_Morris_CV.pdf" download>Download PDF</a>
+          </li>
         </ul>
         <p class="summary">
           Technical executive and hands-on engineering leader with 11+ years building
@@ -610,9 +613,9 @@
               <p class="entry-meta">Remote · 2019–2026</p>
             </div>
             <ul class="titles" aria-label="Roles at SpankChain">
-              <li>Chief Technology Officer <time>Jul 2020–Mar 2026</time></li>
-              <li>Acting Head of Engineering <time>Dec 2019–Jul 2020</time></li>
-              <li>Senior Software Engineer <time>Apr 2019–Dec 2019</time></li>
+              <li><span>Chief Technology Officer</span> <time>Jul 2020–Mar 2026</time></li>
+              <li><span>Acting Head of Engineering</span> <time>Dec 2019–Jul 2020</time></li>
+              <li><span>Senior Software Engineer</span> <time>Apr 2019–Dec 2019</time></li>
             </ul>
             <ul class="points">
               <li>
@@ -659,7 +662,7 @@
               <p class="entry-meta">Denver, Colorado · 2017–2019</p>
             </div>
             <ul class="titles">
-              <li>Senior Software Engineer <time>Sep 2017–Feb 2019</time></li>
+              <li><span>Senior Software Engineer</span> <time>Sep 2017–Feb 2019</time></li>
             </ul>
             <ul class="points">
               <li>
@@ -680,7 +683,7 @@
               <p class="entry-meta">Ann Arbor, Michigan · 2015–2017</p>
             </div>
             <ul class="titles">
-              <li>Development Team Lead <time>Aug 2015–Jun 2017</time></li>
+              <li><span>Development Team Lead</span> <time>Aug 2015–Jun 2017</time></li>
             </ul>
             <ul class="points">
               <li>
@@ -709,7 +712,7 @@
               <p class="entry-meta">Colorado Springs, Colorado · 2014–2015</p>
             </div>
             <ul class="titles">
-              <li>Integration Specialist <time>Nov 2014–Aug 2015</time></li>
+              <li><span>Integration Specialist</span> <time>Nov 2014–Aug 2015</time></li>
             </ul>
             <ul class="points">
               <li>
@@ -729,7 +732,7 @@
               <p class="entry-meta">Simien Mountains, Ethiopia · 2012–2014</p>
             </div>
             <ul class="titles">
-              <li>Field Site Manager <time>Jun 2012–Jan 2014</time></li>
+              <li><span>Field Site Manager</span> <time>Jun 2012–Jan 2014</time></li>
             </ul>
             <ul class="points">
               <li>
