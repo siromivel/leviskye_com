@@ -373,7 +373,7 @@
 
       @page {
         size: letter;
-        margin: 0.5in 0.6in;
+        margin: 0.35in 0.55in;
       }
 
       @media print {
@@ -385,7 +385,7 @@
         }
 
         html {
-          font-size: 9pt;
+          font-size: 8.4pt;
         }
 
         body {
@@ -434,7 +434,7 @@
         .cv-section {
           grid-template-columns: 7.5rem 1fr;
           gap: 1.25rem;
-          padding-block: 0.7rem;
+          padding-block: 0.55rem;
         }
 
         .section-label {
@@ -450,7 +450,7 @@
         }
 
         .skills .card + .card {
-          margin-top: 0.25rem;
+          margin-top: 0.1rem;
         }
 
         .skills .card h3,
@@ -506,8 +506,8 @@
         }
 
         .entry + .entry {
-          margin-top: 0.6rem;
-          padding-top: 0.6rem;
+          margin-top: 0.45rem;
+          padding-top: 0.45rem;
         }
 
         .titles {
@@ -527,7 +527,7 @@
         }
 
         .points li + li {
-          margin-top: 0.1rem;
+          margin-top: 0.05rem;
         }
 
         .entry-header,
@@ -641,8 +641,15 @@
               </li>
               <li>
                 Owned payment and settlement systems processing seven figures in transaction
-                volume, including banking integrations, KYC/AML controls, security,
-                reliability, and incident response.
+                volume, including banking integrations, KYC/AML controls, GDPR/CCPA compliance
+                and federal age- and identity-verification recordkeeping (18 U.S.C. § 2257),
+                along with security, reliability and incident response.
+              </li>
+              <li>
+                Maintained Ethereum payment-channel infrastructure, working across signing, key
+                management and Keccak hashing in Solidity, Vyper and JavaScript; used Python to
+                parse complex smart-contract state from the Ethereum blockchain; stood up
+                Keycloak as the identity and access layer for v2 of the payments platform.
               </li>
               <li>
                 Maintained 99.9% platform uptime through the loss of banking partners, product
@@ -651,8 +658,10 @@
               </li>
               <li>
                 Led the technical wind-down of the company: kept security and access controls
-                intact through staff reductions, archived regulated data, and advised
-                leadership on the handoff of intellectual property.
+                intact through staff reductions, archived regulated data, advised leadership on
+                the handoff of intellectual property and modeled the economics of recovering
+                six-figure residual balances from retired payment-channel contracts against
+                on-chain gas costs.
               </li>
             </ul>
           </article>
@@ -667,9 +676,9 @@
             </ul>
             <ul class="points">
               <li>
-                Architected and built a custom payment-processing system, including
-                third-party integrations, transaction workflows, failure handling, and
-                PCI-compliant treatment of payment data.
+                Architected and built a PCI DSS Level 1 payment gateway, including third-party
+                processor integrations, transaction workflows, failure handling and AES-256
+                encryption of cardholder data.
               </li>
               <li>
                 Built and scaled customer-facing reservation and payment systems with Java,
@@ -721,8 +730,9 @@
                 and BigCommerce.
               </li>
               <li>
-                Tuned search relevance and diagnosed integration and production issues with
-                Elasticsearch, Logstash, and Kibana.
+                Built pipelines that extracted client inventory and catalog data into S3 and
+                indexed it into Elasticsearch, with custom relevance weighting for embedded SaaS
+                search; diagnosed integration and production issues across the ELK stack.
               </li>
             </ul>
           </article>
@@ -781,13 +791,18 @@
               <p class="entry-meta">2026</p>
             </div>
             <ul class="titles">
-              <li>Clojure and scientific computing</li>
+              <li>Clojure, Python and scientific computing</li>
             </ul>
             <ul class="points">
               <li>
                 Implemented configurable Ricker population models in Clojure with automated
                 equilibrium and cycle detection, Lyapunov exponent estimation, bifurcation
                 analysis, and Vega-Lite visualizations.
+              </li>
+              <li>
+                Building stochastic population and eco-evolutionary models in Python with NumPy
+                and SciPy, with attention to vectorization, preallocated fixed-size arrays and
+                amortized array growth for performance.
               </li>
             </ul>
           </article>
@@ -803,27 +818,47 @@
           </div>
           <div class="card">
             <h3>Product and web</h3>
-            <p>React, Angular, Vue, Node.js, NestJS, Express, Dropwizard, HTML, CSS</p>
+            <p>React, Angular, Vue, Node.js, NestJS, Express, Dropwizard, REST, GraphQL, HTML, CSS</p>
           </div>
           <div class="card">
             <h3>Data</h3>
-            <p>PostgreSQL, MySQL, Redis, MongoDB, Elasticsearch, Logstash, Kibana</p>
+            <p>PostgreSQL (JSONB, HSTORE), MySQL, MongoDB, Redis, Elasticsearch, Logstash, Kibana, S3-based data lakes</p>
           </div>
           <div class="card">
             <h3>Infrastructure</h3>
-            <p>AWS, GCP, Kubernetes, Docker, Terraform, Linux, KVM/QEMU</p>
+            <p>
+              AWS (S3, EC2, EKS, Lambda, RDS/Aurora, KMS, IAM, CloudFront); GCP (GKE, Cloud Run,
+              BigQuery, Pub/Sub, Cloud SQL); Cloudflare (Workers, WAF, DDoS protection);
+              Kubernetes, Docker, Terraform, Linux, KVM/QEMU
+            </p>
+          </div>
+          <div class="card">
+            <h3>Delivery and observability</h3>
+            <p>Git, GitHub Actions, Buildkite, Jenkins, CI/CD pipelines, Datadog, New Relic, Prometheus, Graylog</p>
           </div>
           <div class="card">
             <h3>AI and agentic systems</h3>
             <p>
-              Multi-model agentic workflows with cost- and privacy-aware routing between
-              frontier APIs and self-hosted open-weight models (OpenCode, LiteLLM, Qwen);
-              constrained generation; auditing agents; structured reporting pipelines
+              Claude, GPT, Gemini, Gemma, Qwen; Claude Code, Codex (CLI and IDE), OpenCode,
+              Cline/Roo Code, LiteLLM, Ollama, MTPLX; multi-model agentic workflows with cost-
+              and privacy-aware routing between frontier APIs and self-hosted models;
+              constrained generation with independent auditing agents
+            </p>
+          </div>
+          <div class="card">
+            <h3>Security and cryptography</h3>
+            <p>
+              AES-256 and field-level encryption of cardholder data and SSNs, key management,
+              digital signatures, salted hashing (bcrypt), Keccak/SHA-family hashing, in-house
+              authentication systems, Keycloak
             </p>
           </div>
           <div class="card">
             <h3>Risk and compliance</h3>
-            <p>PCI, HIPAA, FERPA, KYC/AML, security, privacy, and incident response</p>
+            <p>
+              PCI DSS Level 1, HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257
+              recordkeeping; security, privacy and incident response
+            </p>
           </div>
         </div>
       </section>
