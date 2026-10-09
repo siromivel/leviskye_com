@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Curriculum vitae for Levi Skye Morris, a technical executive, engineering leader and systems architect based in Boulder, Colorado."
+      content="Curriculum vitae for Levi Skye Morris, an engineering leader and principal engineer in platform and infrastructure based in Boulder, Colorado."
     >
     <meta name="theme-color" content="#f2eee4">
     <link rel="canonical" href="https://leviskye.com/cv">
@@ -17,7 +17,7 @@
         "name": "Levi Skye Morris",
         "url": "https://leviskye.com",
         "email": "mailto:levi@leviskye.com",
-        "jobTitle": "Technical executive and engineering leader",
+        "jobTitle": "Engineering leader and principal engineer",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Boulder",
@@ -285,6 +285,16 @@
         color: var(--muted);
       }
 
+      .entry-desc {
+        max-width: 44rem;
+        margin: 0.9rem 0 0;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-style: italic;
+        line-height: 1.55;
+        text-wrap: pretty;
+      }
+
       .points {
         margin: 1.1rem 0 0;
         padding-left: 1.1rem;
@@ -514,6 +524,12 @@
           margin-top: 0.2rem;
         }
 
+        .entry-desc {
+          max-width: none;
+          margin-top: 0.3rem;
+          font-size: 9.5pt;
+        }
+
         .summary {
           line-height: 1.5;
         }
@@ -557,7 +573,7 @@
       <section class="intro" aria-labelledby="cv-heading">
         <p class="eyebrow">Curriculum vitae</p>
         <h1 id="cv-heading">Levi Skye Morris</h1>
-        <p class="role">Technical executive · Engineering leader · Systems architect</p>
+        <p class="role">Engineering leader · Principal engineer · Platform &amp; infrastructure</p>
         <ul class="contact" aria-label="Contact information">
           <li>Boulder, Colorado</li>
           <li><a href="mailto:levi@leviskye.com">levi@leviskye.com</a></li>
@@ -568,38 +584,12 @@
           </li>
         </ul>
         <p class="summary">
-          Technical executive and hands-on engineering leader with 11+ years building
-          customer-facing products and infrastructure in financial technology, healthcare,
-          e-commerce and distributed systems. Promoted from senior engineer to CTO; led a
-          globally distributed organization through growth, banking and regulatory
-          disruption, and an orderly wind-down, while staying close to architecture, reliability and the hardest technical problems.
+          Hands-on engineering leader and former CTO with 11+ years building payments,
+          healthcare and distributed systems. Promoted from senior engineer to CTO; kept a
+          high-risk payments platform running through banking loss, deplatforming, persistent
+          attacks and an orderly wind-down while staying close to architecture, reliability and
+          the hardest technical problems.
         </p>
-      </section>
-
-      <section class="cv-section" aria-labelledby="strengths-heading">
-        <h2 class="section-label" id="strengths-heading">Core strengths</h2>
-        <div class="section-content grid-3">
-          <div class="card">
-            <h3>Leadership</h3>
-            <p>
-              Technical strategy, roadmapping, project and program management, hiring,
-              coaching and distributed teams.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Systems</h3>
-            <p>
-              Payments and settlement, customer-facing applications, platform reliability,
-              performance engineering, sensitive data and applied cryptography.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Operations</h3>
-            <p>
-              Regulated environments, incident response, crisis management, organizational change and responsible wind-downs.
-            </p>
-          </div>
-        </div>
       </section>
 
       <section class="cv-section" aria-labelledby="experience-heading">
@@ -615,12 +605,31 @@
               <li><span>Acting Head of Engineering</span> <time>Dec 2019–Jul 2020</time></li>
               <li><span>Senior Software Engineer</span> <time>Apr 2019–Dec 2019</time></li>
             </ul>
+            <p class="entry-desc">
+              High-risk payment processor for independent creators: ran its own ledger,
+              user-to-user payments, KYC/AML and crypto settlement rails through banking loss and
+              deplatforming.
+            </p>
             <ul class="points">
               <li>
                 Promoted from senior engineer to CTO. Led an 8–10-person engineering
                 organization across five countries and a 10-person contracted product team in
                 Argentina, owning recruiting, hiring, coaching, performance management and
-                workforce planning; together the teams built and operated three distinct products.
+                workforce planning; together the teams built and operated SpankPay, SpankPay.me,
+                SpankMatch and a creator content platform.
+              </li>
+              <li>
+                Architected SpankPay v2 from the ground up on new frameworks and design patterns,
+                with Keycloak as its identity and access layer.
+              </li>
+              <li>
+                Architected SpankPay.me, a PayPal.me-style payment-link product that gave
+                independent creators reliable access to payments after mainstream processors
+                deplatformed them.
+              </li>
+              <li>
+                Architected SpankMatch, defining its stack and data flow and holding final approval
+                over design changes as the team built it.
               </li>
               <li>
                 Set technical direction across applications, backend services, payment workflows,
@@ -643,11 +652,15 @@
               <li>
                 Maintained Ethereum payment-channel infrastructure, working across signing, key
                 management and Keccak hashing in Solidity, Vyper and JavaScript; used Python to
-                parse complex smart-contract state from the Ethereum blockchain; stood up
-                Keycloak as the identity and access layer for v2 of the payments platform.
+                parse complex smart-contract state from the Ethereum blockchain.
               </li>
               <li>
-                Sustained 99.9% platform uptime through the loss of banking partners, product de-platforming and shifting regulatory requirements; retained roughly 80% of
+                Secured payment infrastructure and signing keys against persistent, well-resourced
+                attackers with no law-enforcement backstop.
+              </li>
+              <li>
+                Sustained 99.9% platform uptime through the loss of banking partners, product
+                deplatforming and shifting regulatory requirements; retained roughly 80% of
                 the core team through a major product sunset and restructuring.
               </li>
               <li>
@@ -670,8 +683,9 @@
             </ul>
             <ul class="points">
               <li>
-                Architected and built a PCI DSS Level 1 payment gateway, including third-party
-                processor integrations, transaction workflows, failure handling and AES-256
+                Led a three-person payments squad; architected and built a payment gateway to PCI DSS
+                Level 1 requirements, including
+                third-party processor integrations, transaction workflows, failure handling and AES-256
                 encryption of cardholder data.
               </li>
               <li>
@@ -701,6 +715,11 @@
               <li>
                 Led engineering as monthly payment volume grew from six to seven figures,
                 balancing delivery against privacy, security, data integrity and operational health.
+              </li>
+              <li>
+                Maintained and extended an in-house payment flow that took raw card numbers through
+                our own form and transmitted them securely to the processor, with no tokenization
+                layer.
               </li>
               <li>
                 Resolved severe PostgreSQL performance bottlenecks through query-plan analysis,
@@ -835,10 +854,9 @@
           <div class="card">
             <h3>AI and agentic systems</h3>
             <p>
-              Claude, GPT, Gemini, Gemma, Qwen; Claude Code, Codex (CLI and IDE), OpenCode,
-              Cline/Roo Code, LiteLLM, Ollama, MTPLX; multi-model agentic workflows with cost-
-              and privacy-aware routing between frontier APIs and self-hosted models;
-              constrained generation with independent auditing agents
+              Multi-model agentic workflows across Claude, GPT, Gemini, Qwen and Gemma with
+              cost- and privacy-aware routing between frontier APIs and self-hosted models
+              (LiteLLM, Ollama); constrained generation with independent auditing agents
             </p>
           </div>
           <div class="card">
@@ -852,7 +870,7 @@
           <div class="card">
             <h3>Risk and compliance</h3>
             <p>
-              PCI DSS Level 1, HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257 record-keeping; security, privacy and incident response
+              PCI DSS (Level 1 build, raw card handling), HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257 record-keeping; security, privacy and incident response
             </p>
           </div>
         </div>
