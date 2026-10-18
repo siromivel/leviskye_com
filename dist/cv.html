@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Curriculum vitae for Levi Skye Morris, an engineering leader and principal engineer in platform and infrastructure based in Boulder, Colorado."
+      content="Curriculum vitae for Levi Skye Morris, a staff and principal engineer and former CTO building payments, data and platform systems, based in Boulder, Colorado."
     >
     <meta name="theme-color" content="#f2eee4">
     <link rel="canonical" href="https://leviskye.com/cv">
@@ -17,7 +17,7 @@
         "name": "Levi Skye Morris",
         "url": "https://leviskye.com",
         "email": "mailto:levi@leviskye.com",
-        "jobTitle": "Engineering leader and principal engineer",
+        "jobTitle": "Staff and principal engineer",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Boulder",
@@ -573,7 +573,7 @@
       <section class="intro" aria-labelledby="cv-heading">
         <p class="eyebrow">Curriculum vitae</p>
         <h1 id="cv-heading">Levi Skye Morris</h1>
-        <p class="role">Engineering leader · Principal engineer · Platform &amp; infrastructure</p>
+        <p class="role">Staff / Principal engineer · Payments, data &amp; platform systems · Former CTO</p>
         <ul class="contact" aria-label="Contact information">
           <li>Boulder, Colorado</li>
           <li><a href="mailto:levi@leviskye.com">levi@leviskye.com</a></li>
@@ -584,11 +584,12 @@
           </li>
         </ul>
         <p class="summary">
-          Hands-on engineering leader and former CTO with 11+ years building payments,
-          healthcare and distributed systems. Promoted from senior engineer to CTO; kept a
-          high-risk payments platform running through banking loss, deplatforming, persistent
-          attacks and an orderly wind-down while staying close to architecture, reliability and
-          the hardest technical problems.
+          Hands-on staff-level engineer and former CTO with 11+ years designing and building
+          payments, healthcare and distributed systems on PostgreSQL: ledgers, payment gateways,
+          third-party integrations and APIs that handle sensitive financial and health data.
+          Architected and led the rebuild of a high-risk payments platform and kept it running
+          through banking loss, deplatforming and persistent attacks, while mentoring engineers
+          and staying in the code on the hardest problems.
         </p>
       </section>
 
@@ -601,7 +602,7 @@
               <p class="entry-meta">Remote · 2019–2026</p>
             </div>
             <ul class="titles" aria-label="Roles at SpankChain">
-              <li><span>Chief Technology Officer</span> <time>Jul 2020–Apr 2026</time></li>
+              <li><span>Chief Technology Officer (Hands-on Chief Architect)</span> <time>Jul 2020–Apr 2026</time></li>
               <li><span>Acting Head of Engineering</span> <time>Dec 2019–Jul 2020</time></li>
               <li><span>Senior Software Engineer</span> <time>Apr 2019–Dec 2019</time></li>
             </ul>
@@ -612,63 +613,37 @@
             </p>
             <ul class="points">
               <li>
-                Promoted from senior engineer to CTO. Led an 8–10-person engineering
-                organization across five countries and a 10-person contracted product team in
-                Argentina, owning recruiting, hiring, coaching, performance management and
-                workforce planning; together the teams built and operated SpankPay, SpankPay.me,
-                SpankMatch and a creator content platform.
+                Architected and led the ground-up rebuild of SpankPay v2, the company's ledger and payments platform: replaced an over-normalized schema and a home-rolled framework with NestJS conventions and targeted denormalization, storing an opening balance on every transaction so balances were fast to read and auditable end to end.
               </li>
               <li>
-                Architected SpankPay v2 from the ground up on new frameworks and design patterns,
-                with Keycloak as its identity and access layer.
+                Kept balances correct under concurrent writes with serializable transactions on a single primary, planned hot-account balance splitting for scale and migrated balances via snapshot and backfill; Keycloak handled identity and access.
               </li>
               <li>
-                Architected SpankPay.me, a PayPal.me-style payment-link product that gave
-                independent creators reliable access to payments after mainstream processors
-                deplatformed them.
+                Owned payment and settlement systems processing seven figures in transaction volume, including banking integrations, KYC/AML controls, GDPR/CCPA compliance and federal age- and identity-verification recordkeeping (18 U.S.C. § 2257), along with security, reliability and incident response.
               </li>
               <li>
-                Architected SpankMatch, defining its stack and data flow and holding final approval
-                over design changes as the team built it.
+                Architected and scaled the security of mission-critical payment infrastructure and cryptographic signing keys against persistent, well-resourced adversaries, and led incident response.
               </li>
               <li>
-                Set technical direction across applications, backend services, payment workflows,
-                data systems and blockchain infrastructure, and owned cloud operations on GCP:
-                Kubernetes (GKE) with Helm, Cloud Run, Cloud SQL, BigQuery and Pub/Sub.
+                Architected SpankPay.me, a payment-link product that kept independent creators paid after mainstream processors deplatformed them, and SpankMatch, defining its stack and data flow and holding final approval over design changes.
               </li>
               <li>
-                Partnered with product designers and commercial stakeholders to carry
-                customer-facing features from concept to production. Without a dedicated project
-                manager, built cross-product roadmaps with the CEO and CFO, broke them into epics and sprints and ran standups, planning and retros. Managed vendor contracts and
-                SOWs for the contracted team. Built support and escalation processes from zero,
-                with a rotating triage engineer and protected capacity for technical debt.
+                Set technical direction across services, payments, data and blockchain infrastructure, and owned GCP operations: GKE with Helm, Cloud Run, Cloud SQL, BigQuery and Pub/Sub.
               </li>
               <li>
-                Owned payment and settlement systems processing seven figures in transaction
-                volume, including banking integrations, KYC/AML controls, GDPR/CCPA compliance
-                and federal age- and identity-verification record-keeping (18 U.S.C. § 2257),
-                along with security, reliability and incident response.
+                Maintained Ethereum payment-channel infrastructure, working across signing, key management and Keccak hashing in Solidity, Vyper and JavaScript; used Python to parse complex smart-contract state from the Ethereum blockchain.
               </li>
               <li>
-                Maintained Ethereum payment-channel infrastructure, working across signing, key
-                management and Keccak hashing in Solidity, Vyper and JavaScript; used Python to
-                parse complex smart-contract state from the Ethereum blockchain.
+                Maintained 99.9% platform uptime through the loss of banking partners, product deplatforming and shifting regulatory requirements; retained roughly 80% of the core team through a major product sunset and restructuring.
               </li>
               <li>
-                Architected, scaled, and operationally led the team securing mission-critical payment
-                infrastructure and cryptographic signing keys against persistent, well-resourced adversaries.
+                Grew from senior engineer to CTO, leading 8–10 engineers across five countries plus a contracted team and owning hiring, coaching and performance management; kept weekly 1-on-1s with junior and senior engineers throughout, including mentoring a fresh bootcamp hire into a highly effective IC writing production backend microservices within four months.
               </li>
               <li>
-                Sustained 99.9% platform uptime through the loss of banking partners, product
-                deplatforming and shifting regulatory requirements; retained roughly 80% of
-                the core team through a major product sunset and restructuring.
+                Built support and escalation from zero, with a rotating triage engineer and protected capacity for technical debt, and turned roadmaps set with the CEO and CFO into epics and sprints without a dedicated project manager.
               </li>
               <li>
-                Led the technical wind-down of the company: kept security and access controls
-                intact through staff reductions, archived regulated data, advised leadership on
-                the handoff of intellectual property and modeled the economics of recovering
-                six-figure residual balances from retired payment-channel contracts against
-                on-chain gas costs.
+                Led the technical wind-down: kept security and access controls intact through staff reductions, archived regulated data and modeled recovery of six-figure residual balances from retired payment-channel contracts.
               </li>
             </ul>
           </article>
@@ -705,25 +680,19 @@
             </ul>
             <ul class="points">
               <li>
-                Led a 3–5-person team building a HIPAA/FERPA-compliant electronic health record
-                and registration platform for pediatric and educational organizations.
+                Resolved severe PostgreSQL bottlenecks through query-plan analysis, indexing, recursive CTEs and data-model changes.
               </li>
               <li>
-                Ran true XP, with mandatory driver/navigator pairing on sensitive features and
-                mob programming for the worst outages; later carried the practice to CampSpot.
+                Led a 3–5-person team building a HIPAA/FERPA-compliant electronic health record and registration platform for pediatric and educational organizations.
               </li>
               <li>
-                Led engineering as monthly payment volume grew from six to seven figures,
-                balancing delivery against privacy, security, data integrity and operational health.
+                Ran true XP, with mandatory driver/navigator pairing on sensitive features and mob programming for the worst outages; later carried the practice to CampSpot.
               </li>
               <li>
-                Maintained and extended an in-house payment flow that took raw card numbers through
-                our own form and transmitted them securely to the processor, with no tokenization
-                layer.
+                Led engineering as monthly payment volume grew from six to seven figures, balancing delivery against privacy, security, data integrity and operational health.
               </li>
               <li>
-                Resolved severe PostgreSQL performance bottlenecks through query-plan analysis,
-                indexing, recursive CTEs and data-model changes.
+                Maintained an in-house flow that took raw card numbers through our own form and sent them securely to the processor.
               </li>
             </ul>
           </article>
@@ -738,12 +707,7 @@
             </ul>
             <ul class="points">
               <li>
-                Built production e-commerce search integrations for Shopify, Magento, NetSuite and BigCommerce.
-              </li>
-              <li>
-                Built pipelines that extracted client inventory and catalog data into S3 and
-                indexed it into Elasticsearch, with custom relevance weighting for embedded SaaS
-                search; diagnosed integration and production issues across the ELK stack.
+                Built third-party platform integrations for Shopify, Magento, NetSuite and BigCommerce, with pipelines that loaded catalog data into S3 and indexed it into Elasticsearch with custom relevance weighting; diagnosed production issues across the ELK stack.
               </li>
             </ul>
           </article>
@@ -776,6 +740,24 @@
         <div class="section-content">
           <article class="entry">
             <div class="entry-header">
+              <h3><a href="https://github.com/siromivel/wuixpose">WUIXpose</a></h3>
+              <p class="entry-meta">2026</p>
+            </div>
+            <ul class="titles">
+              <li>Open source: Python, Django, PostGIS and React</li>
+            </ul>
+            <ul class="points">
+              <li>
+                Building a wildfire mitigation tool that maps home ignition zones around every structure in Boulder County from parcel, footprint and address data, on Django, GeoDjango, DRF, PostGIS, React and MapLibre.
+              </li>
+              <li>
+                Serves map data as PostGIS-generated vector tiles; keeps incremental jobs correct with database triggers that track geometry changes and versioned zone rules; ingests defensively, refusing to retire records when an upstream fetch comes back short. CI runs pyright, ruff and pytest.
+              </li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
               <h3>Wildfire risk and edge photogrammetry</h3>
               <p class="entry-meta">2026</p>
             </div>
@@ -784,14 +766,7 @@
             </ul>
             <ul class="points">
               <li>
-                Evaluated a wildfire-risk assessment service for real estate and insurance, and
-                designed an edge-computing photogrammetry architecture combining UAV and on-foot
-                capture to model structures, terrain, vegetation and Home Ignition Zones.
-              </li>
-              <li>
-                Built a reporting pipeline that turns structured field observations into
-                conservative, plain-language risk assessments, using constrained local inference
-                checked by an independent auditing agent.
+                Designed a wildfire-risk assessment service combining UAV and on-foot photogrammetry with a reporting pipeline that turns field observations into conservative, plain-language assessments, using constrained local inference checked by an independent auditing agent.
               </li>
             </ul>
           </article>
@@ -806,13 +781,7 @@
             </ul>
             <ul class="points">
               <li>
-                Implemented configurable Ricker population models in Clojure with automated
-                equilibrium and cycle detection, Lyapunov exponent estimation, bifurcation analysis and Vega-Lite visualizations.
-              </li>
-              <li>
-                Building stochastic population and eco-evolutionary models in Python with NumPy
-                and SciPy, with attention to vectorization, preallocated fixed-size arrays and
-                amortized array growth for performance.
+                Built Ricker and stochastic eco-evolutionary population models in Clojure and Python (NumPy, SciPy), with equilibrium and cycle detection, Lyapunov exponent estimation and bifurcation analysis.
               </li>
             </ul>
           </article>
@@ -828,19 +797,19 @@
           </div>
           <div class="card">
             <h3>Product and web</h3>
-            <p>React, Angular, Vue, Node.js, NestJS, Express, Dropwizard, REST, GraphQL, HTML, CSS</p>
+            <p>React, NextJS, Node.js, NestJS, Django, Ruby on Rails, Express, Dropwizard, Angular, Vue, REST, GraphQL, HTML, CSS, SASS/SCSS</p>
           </div>
           <div class="card">
             <h3>Data</h3>
-            <p>PostgreSQL (JSONB, HSTORE), MySQL, MongoDB, Redis, Elasticsearch, Logstash, Kibana, S3-based data lakes</p>
+            <p>PostgreSQL, MySQL, MongoDB, PostGIS, Redis, Elasticsearch, Logstash, Kibana, GCP and S3-based data lakes</p>
           </div>
           <div class="card">
             <h3>Infrastructure</h3>
             <p>
               AWS (S3, EC2, EKS, Lambda, RDS/Aurora, KMS, IAM, CloudFront); GCP (GKE, Cloud Run,
-              BigQuery, Pub/Sub, Cloud SQL); Cloudflare (Workers, WAF, DDoS protection);
-              Kubernetes, Helm, Docker, Terraform, Linux, KVM/QEMU, Proxmox, Tailscale;
-              networking (DNS, TLS, VPC design, load balancing)
+              BigQuery, Pub/Sub, Cloud SQL, IAM, Cloud Storage); Cloudflare (Workers, WAF, DDoS
+              protection); Kubernetes, Helm, Docker, Terraform, Linux, KVM/QEMU, Proxmox,
+              Tailscale; networking (DNS, TLS, VPC design, load balancing); Vercel
             </p>
           </div>
           <div class="card">
@@ -848,8 +817,8 @@
             <p>Git, GitHub Actions, Buildkite, Jenkins, CI/CD pipelines, Datadog, New Relic, Prometheus, Graylog</p>
           </div>
           <div class="card">
-            <h3>Process and project management</h3>
-            <p>Kanban, Scrum, XP (pairing, mob programming), Jira, Confluence, GitHub Projects, Pivotal Tracker</p>
+            <h3>Process</h3>
+            <p>Agile, Kanban, Scrum, XP (pairing, mob programming), Jira, Confluence, GitHub Projects, Pivotal Tracker</p>
           </div>
           <div class="card">
             <h3>AI and agentic systems</h3>
@@ -870,7 +839,7 @@
           <div class="card">
             <h3>Risk and compliance</h3>
             <p>
-              PCI DSS (Level 1 build, raw card handling), HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257 record-keeping; security, privacy and incident response
+              PCI DSS (Level 1 build, raw card handling), HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257 recordkeeping; security, privacy and incident response
             </p>
           </div>
         </div>
