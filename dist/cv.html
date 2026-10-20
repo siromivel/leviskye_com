@@ -584,12 +584,7 @@
           </li>
         </ul>
         <p class="summary">
-          Hands-on staff-level engineer and former CTO with 11+ years designing and building
-          payments, healthcare and distributed systems on PostgreSQL: ledgers, payment gateways,
-          third-party integrations and APIs that handle sensitive financial and health data.
-          Architected and led the rebuild of a high-risk payments platform and kept it running
-          through banking loss, deplatforming and persistent attacks, while mentoring engineers
-          and staying in the code on the hardest problems.
+          Hands-on staff-level engineer and former CTO with 11+ years designing and building payments, healthcare and distributed systems: ledgers, payment gateways, third-party integrations and APIs that handle sensitive financial and health data. Architected and led the rebuild of a high-risk payments platform and kept it running through banking loss, deplatforming and persistent attacks, while mentoring engineers and acting as the principal engineer across four products.
         </p>
       </section>
 
@@ -599,27 +594,25 @@
           <article class="entry">
             <div class="entry-header">
               <h3>SpankChain</h3>
-              <p class="entry-meta">Remote · 2019–2026</p>
+              <p class="entry-meta">Remote</p>
             </div>
             <ul class="titles" aria-label="Roles at SpankChain">
-              <li><span>Chief Technology Officer (Hands-on Chief Architect)</span> <time>Jul 2020–Apr 2026</time></li>
+              <li><span>Chief Technology Officer / Principal Engineer</span> <time>Jul 2020–Apr 2026</time></li>
               <li><span>Acting Head of Engineering</span> <time>Dec 2019–Jul 2020</time></li>
               <li><span>Senior Software Engineer</span> <time>Apr 2019–Dec 2019</time></li>
             </ul>
             <p class="entry-desc">
-              High-risk payment processor for independent creators: ran its own ledger,
-              user-to-user payments, KYC/AML and crypto settlement rails through banking loss and
-              deplatforming.
+              High-risk payment processor for independent creators: ran its own ledger, user-to-user payments, KYC/AML and crypto plus fiat settlement rails through banking loss and deplatforming.
             </p>
             <ul class="points">
               <li>
-                Architected and led the ground-up rebuild of SpankPay v2, the company's ledger and payments platform: replaced an over-normalized schema and a home-rolled framework with NestJS conventions and targeted denormalization, storing an opening balance on every transaction so balances were fast to read and auditable end to end.
+                Architected and led the ground-up rebuild of SpankPay v2, the company's ledger and payments platform: replaced an over-normalized schema and a home-rolled framework with NestJS conventions and targeted denormalization to maximize speed and auditability.
               </li>
               <li>
-                Kept balances correct under concurrent writes with serializable transactions on a single primary, planned hot-account balance splitting for scale and migrated balances via snapshot and backfill; Keycloak handled identity and access.
+                Kept balances correct under concurrent writes on a single primary database with explicit locks and serializable transactions, planned hot-account balance splitting for scale and migrated balances via snapshot and backfill; introduced Keycloak for secure authentication without external providers.
               </li>
               <li>
-                Owned payment and settlement systems processing seven figures in transaction volume, including banking integrations, KYC/AML controls, GDPR/CCPA compliance and federal age- and identity-verification recordkeeping (18 U.S.C. § 2257), along with security, reliability and incident response.
+                Owned payment and settlement systems handling high transaction volumes, including banking integrations, KYC/AML controls and GDPR/CCPA compliance, along with security, reliability and incident response.
               </li>
               <li>
                 Architected and scaled the security of mission-critical payment infrastructure and cryptographic signing keys against persistent, well-resourced adversaries, and led incident response.
@@ -628,7 +621,7 @@
                 Architected SpankPay.me, a payment-link product that kept independent creators paid after mainstream processors deplatformed them, and SpankMatch, defining its stack and data flow and holding final approval over design changes.
               </li>
               <li>
-                Set technical direction across services, payments, data and blockchain infrastructure, and owned GCP operations: GKE with Helm, Cloud Run, Cloud SQL, BigQuery and Pub/Sub.
+                Set technical direction across services, payments, data and blockchain infrastructure, and owned GCP operations: GKE with Kubernetes/Helm, Cloud Run, Cloud SQL, Cloud Storage, BigQuery and Pub/Sub.
               </li>
               <li>
                 Maintained Ethereum payment-channel infrastructure, working across signing, key management and Keccak hashing in Solidity, Vyper and JavaScript; used Python to parse complex smart-contract state from the Ethereum blockchain.
@@ -640,10 +633,10 @@
                 Grew from senior engineer to CTO, leading 8–10 engineers across five countries plus a contracted team and owning hiring, coaching and performance management; kept weekly 1-on-1s with junior and senior engineers throughout, including mentoring a fresh bootcamp hire into a highly effective IC writing production backend microservices within four months.
               </li>
               <li>
-                Built support and escalation from zero, with a rotating triage engineer and protected capacity for technical debt, and turned roadmaps set with the CEO and CFO into epics and sprints without a dedicated project manager.
+                Built support and escalation from zero; structured sprint plans to balance managing technical debt with maintaining product velocity; turned roadmaps set with the CEO into actionable epics and sprints without a dedicated project manager.
               </li>
               <li>
-                Led the technical wind-down: kept security and access controls intact through staff reductions, archived regulated data and modeled recovery of six-figure residual balances from retired payment-channel contracts.
+                Led the technical wind-down: kept security and access controls intact through staff reductions, archived regulated data and modeled recovery of residual balances from retired payment-channel contracts.
               </li>
             </ul>
           </article>
@@ -651,21 +644,17 @@
           <article class="entry">
             <div class="entry-header">
               <h3>CampSpot</h3>
-              <p class="entry-meta">Denver, Colorado · 2017–2019</p>
+              <p class="entry-meta">Denver, Colorado</p>
             </div>
             <ul class="titles">
               <li><span>Senior Software Engineer</span> <time>Sep 2017–Feb 2019</time></li>
             </ul>
             <ul class="points">
               <li>
-                Led a three-person payments squad; architected and built a payment gateway to PCI DSS
-                Level 1 requirements, including
-                third-party processor integrations, transaction workflows, failure handling and AES-256
-                encryption of cardholder data.
+                Led a three-person payments team; architected and built a payment gateway to PCI DSS Level 1 requirements, including third-party processor integrations, transaction workflows, failure handling and AES-256 encryption of cardholder data.
               </li>
               <li>
-                Built and scaled customer-facing reservation and payment systems with Java,
-                Kotlin, TypeScript, Dropwizard, Node.js, MySQL and React.
+                Built and scaled customer-facing reservation and payment systems with Java, Kotlin, TypeScript, Dropwizard, Node.js, MySQL and React on AWS.
               </li>
             </ul>
           </article>
@@ -673,17 +662,20 @@
           <article class="entry">
             <div class="entry-header">
               <h3>DocNetwork / CampDoc</h3>
-              <p class="entry-meta">Ann Arbor, Michigan · 2015–2017</p>
+              <p class="entry-meta">Ann Arbor, Michigan</p>
             </div>
             <ul class="titles">
               <li><span>Development Team Lead</span> <time>Aug 2015–Jun 2017</time></li>
             </ul>
             <ul class="points">
               <li>
-                Resolved severe PostgreSQL bottlenecks through query-plan analysis, indexing, recursive CTEs and data-model changes.
+                Led a 3–5-person team building a HIPAA/FERPA-compliant electronic health record and registration platform for pediatric and educational organizations.
               </li>
               <li>
-                Led a 3–5-person team building a HIPAA/FERPA-compliant electronic health record and registration platform for pediatric and educational organizations.
+                Built across the stack in AngularJS, Node.js/Express, PostgreSQL and Terraform on AWS infra including RDS, EC2, S3, ECS, Lambda and API Gateway.
+              </li>
+              <li>
+                Resolved severe PostgreSQL bottlenecks through query-plan analysis, indexing, recursive CTEs and data-model changes.
               </li>
               <li>
                 Ran true XP, with mandatory driver/navigator pairing on sensitive features and mob programming for the worst outages; later carried the practice to CampSpot.
@@ -700,14 +692,14 @@
           <article class="entry">
             <div class="entry-header">
               <h3>SearchSpring</h3>
-              <p class="entry-meta">Colorado Springs, Colorado · 2014–2015</p>
+              <p class="entry-meta">Colorado Springs, Colorado</p>
             </div>
             <ul class="titles">
               <li><span>Integration Specialist</span> <time>Nov 2014–Aug 2015</time></li>
             </ul>
             <ul class="points">
               <li>
-                Built third-party platform integrations for Shopify, Magento, NetSuite and BigCommerce, with pipelines that loaded catalog data into S3 and indexed it into Elasticsearch with custom relevance weighting; diagnosed production issues across the ELK stack.
+                Built third-party platform integrations for Shopify, Magento, NetSuite and BigCommerce, with pipelines that loaded catalog data into S3 and indexed it into Elasticsearch with custom relevance weighting.
               </li>
             </ul>
           </article>
@@ -715,20 +707,17 @@
           <article class="entry">
             <div class="entry-header">
               <h3>Gelada Research Project</h3>
-              <p class="entry-meta">Simien Mountains, Ethiopia · 2012–2014</p>
+              <p class="entry-meta">Simien Mountains, Ethiopia</p>
             </div>
             <ul class="titles">
               <li><span>Field Site Manager</span> <time>Jun 2012–Jan 2014</time></li>
             </ul>
             <ul class="points">
               <li>
-                Ran personnel, logistics, safety, budgets and research data collection at a
-                remote, high-altitude primate field station under tight operational, financial and physical constraints.
+                Ran personnel, logistics, safety, budgets and research data collection at a remote, high-altitude primate field station under tight operational, financial and physical constraints.
               </li>
               <li>
-                Maintained and heavily extended the station's Palm Pilot data-collection software
-                (NSBasic) with no prior programming experience and no internet access, including a
-                custom text-file persistence layer the platform didn't natively support.
+                Maintained and heavily extended the station's Palm Pilot data-collection software (NSBasic) with no prior programming experience and no internet access, including a custom text-file persistence layer the platform didn't natively support.
               </li>
             </ul>
           </article>
@@ -751,7 +740,7 @@
                 Building a wildfire mitigation tool that maps home ignition zones around every structure in Boulder County from parcel, footprint and address data, on Django, GeoDjango, DRF, PostGIS, React and MapLibre.
               </li>
               <li>
-                Serves map data as PostGIS-generated vector tiles; keeps incremental jobs correct with database triggers that track geometry changes and versioned zone rules; ingests defensively, refusing to retire records when an upstream fetch comes back short. CI runs pyright, ruff and pytest.
+                Serves map data as PostGIS-generated vector tiles; keeps incremental jobs correct with database triggers that track geometry changes and versioned zone rules.
               </li>
             </ul>
           </article>
@@ -801,16 +790,11 @@
           </div>
           <div class="card">
             <h3>Data</h3>
-            <p>PostgreSQL, MySQL, MongoDB, PostGIS, Redis, Elasticsearch, Logstash, Kibana, GCP and S3-based data lakes</p>
+            <p>PostgreSQL, MySQL, MongoDB, PostGIS, Redis, Elasticsearch, GCP and S3-based data lakes</p>
           </div>
           <div class="card">
             <h3>Infrastructure</h3>
-            <p>
-              AWS (S3, EC2, EKS, Lambda, RDS/Aurora, KMS, IAM, CloudFront); GCP (GKE, Cloud Run,
-              BigQuery, Pub/Sub, Cloud SQL, IAM, Cloud Storage); Cloudflare (Workers, WAF, DDoS
-              protection); Kubernetes, Helm, Docker, Terraform, Linux, KVM/QEMU, Proxmox,
-              Tailscale; networking (DNS, TLS, VPC design, load balancing); Vercel
-            </p>
+            <p>AWS (S3, EC2, EKS, Lambda, RDS/Aurora, KMS, IAM, CloudFront); GCP (GKE, Cloud Run, BigQuery, Pub/Sub, Cloud SQL, IAM, Cloud Storage); Kubernetes, Helm, Docker, Terraform, Linux, KVM/QEMU, Proxmox, Tailscale; networking</p>
           </div>
           <div class="card">
             <h3>Delivery and observability</h3>
@@ -822,25 +806,15 @@
           </div>
           <div class="card">
             <h3>AI and agentic systems</h3>
-            <p>
-              Multi-model agentic workflows across Claude, GPT, Gemini, Qwen and Gemma with
-              cost- and privacy-aware routing between frontier APIs and self-hosted models
-              (LiteLLM, Ollama); constrained generation with independent auditing agents
-            </p>
+            <p>Claude Code, Codex, Qwen Code, OpenCode, LiteLLM; local Qwen and Gemma models</p>
           </div>
           <div class="card">
             <h3>Security and cryptography</h3>
-            <p>
-              AES-256 and field-level encryption of cardholder data and SSNs, key management,
-              digital signatures, salted hashing (bcrypt), Keccak/SHA-family hashing, in-house
-              authentication systems, Keycloak
-            </p>
+            <p>AES-256 and field-level encryption of cardholder data and SSNs, key management, digital signatures, salted hashing (bcrypt), Keccak/SHA-family hashing, Keycloak</p>
           </div>
           <div class="card">
             <h3>Risk and compliance</h3>
-            <p>
-              PCI DSS (Level 1 build, raw card handling), HIPAA, FERPA, KYC/AML, GDPR/CCPA, 18 U.S.C. § 2257 recordkeeping; security, privacy and incident response
-            </p>
+            <p>PCI DSS (Level 1 build, raw card handling), HIPAA, FERPA, KYC/AML, GDPR/CCPA; security, privacy and incident response</p>
           </div>
         </div>
       </section>
