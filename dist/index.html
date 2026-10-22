@@ -3,19 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Levi Skye Morris</title>
-<meta name="description" content="Engineering leader and former CTO in Boulder County, Colorado. Fractional technical leadership for mission-driven teams, and wildlife photography.">
-<link rel="canonical" href="https://leviskye.com">
-<!-- Social preview: point og:image at a hosted copy of the hero photo -->
+<title>Levi Skye Morris · Engineering leader, former CTO and wildlife photographer in Boulder, Colorado</title>
+<meta name="description" content="Levi Skye Morris is an engineering leader and former CTO in Boulder County, Colorado, offering fractional CTO and technical advisory work for mission-driven teams. Founder of Morris Mitigation Services and wildlife photographer.">
+<link rel="canonical" href="https://leviskye.com/">
+<meta property="og:type" content="profile">
 <meta property="og:title" content="Levi Skye Morris">
-<meta property="og:description" content="Engineering leader and former CTO in Boulder County, Colorado.">
-<meta property="og:image" content="https://leviskye.com/img/crater-lion.jpg" loading="eager">
-<meta property="og:url" content="https://leviskye.com">
+<meta property="og:description" content="Engineering leader and former CTO in Boulder County, Colorado. Fractional CTO and technical advisory work, wildfire-risk software and wildlife photography.">
+<meta property="og:image" content="https://leviskye.com/img/crater-lion.jpg">
+<meta property="og:image:alt" content="A lion sitting in dry grass beneath a cloud-covered crater wall">
+<meta property="og:url" content="https://leviskye.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#e9ece9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://leviskye.com/#person",
+      "name": "Levi Skye Morris",
+      "alternateName": "Levi Morris",
+      "url": "https://leviskye.com/",
+      "image": "https://leviskye.com/img/crater-lion.jpg",
+      "email": "mailto:levi@leviskye.com",
+      "jobTitle": "Founder & Principal Engineer",
+      "description": "Engineering leader and former CTO building compliant, data-intensive systems across health care, e-commerce, payments and geospatial domains.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Morris Mitigation Services, LLC",
+        "url": "https://morrismitigation.com/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boulder",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Michigan" },
+      "knowsAbout": [
+        "Software architecture",
+        "Engineering leadership",
+        "Payment systems",
+        "Distributed systems",
+        "Geospatial software",
+        "Wildfire mitigation",
+        "Wildlife photography"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/levi-skye-morris",
+        "https://github.com/siromivel",
+        "https://morrismitigation.com/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://leviskye.com/#advisory",
+      "name": "Fractional CTO and technical advisory · Levi Skye Morris",
+      "url": "https://leviskye.com/#advisory",
+      "email": "mailto:levi@leviskye.com",
+      "description": "Fractional CTO, architecture and engineering leadership support for mission-driven teams in conservation, climate, disaster resilience, health and impact work.",
+      "founder": { "@id": "https://leviskye.com/#person" },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Colorado" },
+        { "@type": "Place", "name": "Worldwide (remote)" }
+      ],
+      "serviceType": ["Fractional CTO", "Technical advisory", "Software architecture review", "Engineering leadership coaching"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://leviskye.com/#website",
+      "url": "https://leviskye.com/",
+      "name": "Levi Skye Morris",
+      "publisher": { "@id": "https://leviskye.com/#person" }
+    }
+  ]
+}
+</script>
 <style>
   :root {
     --cloud: #e9ece9;      /* the cloud bank */
@@ -49,6 +115,7 @@
   a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
   a:hover { text-decoration-thickness: 2px; }
   :focus-visible { outline: 2px solid var(--grass); outline-offset: 3px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   /* Hero: the crater photo, with the name sitting in the cloud bank */
   .hero {
@@ -65,7 +132,7 @@
     font-size: clamp(2.8rem, 8.5vw, 7.5rem);
   }
   .hero-text p {
-    margin: 0.6em 0 0; max-width: 30ch; color: #2d3934; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.4;
+    margin: 0.6em 0 0; max-width: 32ch; color: #2d3934; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.4;
   }
   .credit {
     position: absolute; right: clamp(16px, 4vw, 48px); bottom: 14px; margin: 0;
@@ -85,41 +152,56 @@
   .links a { text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 0.15rem; }
   .links a:hover { border-bottom-color: var(--link); }
 
-  .gallery-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding: clamp(40px, 7vw, 72px) 0 1.25rem; }
-  .gallery-head h2 { margin: 0; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.01em; }
-  .gallery-head p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+  section.block { padding: clamp(40px, 7vw, 72px) 0; border-bottom: 1px solid var(--rule); }
+  .block h2, .gallery-head h2 { margin: 0; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.01em; line-height: 1.2; }
+  .block > p { max-width: 40rem; margin: 0.9rem 0 0; }
 
-  /* Editorial grid: images keep their own proportions */
-  .gallery {
-    display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.5vw, 18px); margin: 0; padding: 0; list-style: none;
+  .offer { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2.5rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .offer h3 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+  .offer p { margin: 0.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .cards a {
+    display: block; height: 100%; padding: 1.4rem 1.5rem; border: 1px solid var(--rule); border-radius: 4px;
+    color: inherit; text-decoration: none;
   }
-  .gallery li { margin: 0; }
-  .gallery li.w6 { grid-column: span 6; }
-  .gallery li.w4 { grid-column: span 4; }
-  .gallery li.w3 { grid-column: span 3; }
-  .gallery li.w2 { grid-column: span 2; }
-  .gallery button {
-    all: unset; display: block; width: 100%; cursor: zoom-in; border-radius: 2px;
+  .cards a:hover { border-color: var(--link); }
+  .cards h3 { margin: 0; font-size: 1.25rem; font-weight: 500; color: var(--link); }
+  .cards p { margin: 0.45rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+
+  .photos { padding: clamp(40px, 7vw, 72px) 0 0; }
+  .photos-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .photos-head h2 { margin: 0; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.01em; line-height: 1.2; }
+  .photos-head p { margin: 0.35rem 0 0; color: var(--muted); font-style: italic; }
+  .more { font-size: 1rem; text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 0.15rem; white-space: nowrap; }
+  .more:hover { border-bottom-color: var(--link); }
+
+  .teaser {
+    display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr));
+    aspect-ratio: 2.35 / 1; gap: clamp(10px, 1.5vw, 18px); margin: 0; padding: 0; list-style: none;
   }
-  .gallery button:focus-visible { outline: 2px solid var(--grass); outline-offset: 4px; }
-  .gallery img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: var(--ar, 3/2); border-radius: 2px; }
-  .gallery figcaption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--muted); }
+  .teaser .lead-photo { grid-row: span 2; }
+  .teaser li { position: relative; min-height: 0; }
+  .teaser a { position: relative; display: block; height: 100%; overflow: hidden; border-radius: 3px; }
+  .teaser img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .teaser .cap {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 0.9rem 0.7rem;
+    background: linear-gradient(to top, rgba(17,22,20,0.62), rgba(17,22,20,0));
+    color: #f1f4f2; font-size: 0.9rem; letter-spacing: 0.01em;
+  }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .teaser a:hover img { transform: scale(1.03); }
+  }
 
   footer { max-width: 1180px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 48px) 40px; color: var(--muted); font-size: 0.95rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
-  /* Lightbox */
-  dialog { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; }
-  dialog::backdrop { background: rgba(17, 22, 20, 0.92); }
-  dialog img { display: block; max-width: 96vw; max-height: 86vh; object-fit: contain; }
-  dialog p { margin: 0.6rem 0 0; color: #dfe5e1; font-size: 0.95rem; display: flex; justify-content: space-between; gap: 1rem; }
-  dialog button { all: unset; cursor: pointer; color: #dfe5e1; text-decoration: underline; text-underline-offset: 0.2em; }
-  dialog button:focus-visible { outline: 2px solid #d1a660; outline-offset: 3px; }
-
   @media (max-width: 760px) {
     .hero { min-height: 78vh; background-position: 22% 30%; }
-    .intro { grid-template-columns: 1fr; }
-    .gallery { grid-template-columns: 1fr 1fr; }
-    .gallery li.w4, .gallery li.w3, .gallery li.w2 { grid-column: span 2; }
+    .intro, .offer, .cards { grid-template-columns: 1fr; }
+    .teaser { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; }
+    .teaser .lead-photo { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 9; }
+    .teaser li { aspect-ratio: 1 / 1; }
+    .teaser .lead-photo { aspect-ratio: 16 / 9; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .hero h1, .hero-text p { animation: settle 1.4s ease-out both; }
@@ -130,10 +212,11 @@
 </head>
 <body>
 
-<header class="hero" role="img" aria-label="A male lion sitting in dry grass beneath a crater wall, with a bank of cloud pouring over the rim">
+<header class="hero">
+  <span class="sr-only" role="img" aria-label="A male lion sitting in dry grass beneath a crater wall, with a bank of cloud pouring over the rim"></span>
   <div class="hero-text">
     <h1>Levi Skye Morris</h1>
-    <p>Engineer, leader, and photographer in Boulder County, Colorado.</p>
+    <p>Engineering leader, founder and wildlife photographer in Boulder County, Colorado.</p>
   </div>
   <p class="credit">Lion beneath the crater rim</p>
 </header>
@@ -141,35 +224,92 @@
 <main>
   <section class="intro" aria-label="About">
     <div>
-      <p class="lead">I spent six years as a CTO building payment and compliance systems that had to stay up through almost anything, and the years before that building healthcare, e-commerce, and booking platforms.</p>
-      <p>Now I help mission-driven teams in conservation, climate, disaster resilience, health, and impact work build reliable systems and healthy engineering organizations a few days a week. The rest of my time goes to the mountains, my garden, playing bass guitar and French horn, and rides with the Boulder Mountain Bike Patrol.</p>
-      <p>If your team could use a hand, <a href="mailto:levi@leviskye.com">email me</a>.</p>
+      <p class="lead">I spent six years as a CTO building payment and compliance systems that had to stay up through almost anything, and the years before that building healthcare, e-commerce and booking platforms.</p>
+      <p>Today I'm building wildfire-risk assessment software at <a href="https://morrismitigation.com/">Morris Mitigation Services</a> and helping mission-driven teams build reliable systems and healthy engineering organizations. The rest of my time goes to my wife, our garden, our cat and dog, the mountains, playing bass guitar and French horn, and riding for the Boulder Mountain Bike Patrol. Currently training for the Leadville 100 MTB.</p>
     </div>
     <nav aria-label="Elsewhere">
       <ul class="links">
         <li><a href="/cv">Work &amp; CV</a></li>
-        <li><a href="#photographs">Photographs</a></li>
-        <li><a href="https://github.com/siromivel">GitHub</a></li>
+        <li><a href="https://morrismitigation.com/">Morris Mitigation Services</a></li>
+        <li><a href="/photos">Photography</a></li>
+        <li><a href="https://www.linkedin.com/in/levi-skye-morris" rel="me">LinkedIn</a></li>
+        <li><a href="https://github.com/siromivel" rel="me">GitHub</a></li>
         <li><a href="mailto:levi@leviskye.com">levi@leviskye.com</a></li>
       </ul>
     </nav>
   </section>
 
-  <section id="photographs" aria-labelledby="photos-title">
-    <div class="gallery-head">
-      <h2 id="photos-title">Photography</h2>
-      <p>Wildlife, from far away and close to home.</p>
+  <section class="block" id="advisory" aria-labelledby="advisory-title">
+    <h2 id="advisory-title">Fractional CTO &amp; technical advisory</h2>
+    <p>I take on a small number of part-time engagements with startups and nonprofits in conservation, climate, disaster resilience, health and impact work, in Colorado and remotely with organizations around the world.</p>
+    <ul class="offer">
+      <li>
+        <h3>Architecture &amp; reliability</h3>
+        <p>Architecture and technical design, codebase audits, and infrastructure planning and review, focused on improving reliability, uptime and velocity.</p>
+      </li>
+      <li>
+        <h3>Payments, data &amp; compliance</h3>
+        <p>Ledgers, traditional and crypto payment flows and KYC/AML systems, and handling sensitive data under PCI DSS, HIPAA and FERPA.</p>
+      </li>
+      <li>
+        <h3>Engineering leadership</h3>
+        <p>Empowering engineering teams to scale smoothly through leadership, mentoring, strategic planning and cultural transformation.</p>
+      </li>
+    </ul>
+    <p>If your team could use a hand, <a href="mailto:levi@leviskye.com">email me</a>.</p>
+  </section>
+
+  <section class="block" aria-labelledby="work-title">
+    <h2 id="work-title">Work</h2>
+    <ul class="cards">
+      <li>
+        <a href="/cv">
+          <h3>CV</h3>
+          <p>Twelve years across payments, health care, e-commerce and geospatial systems, including six as a CTO.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://morrismitigation.com/">
+          <h3>Morris Mitigation Services</h3>
+          <p>Independent wildfire-risk assessment and mitigation software for Colorado communities.</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/siromivel" rel="me">
+          <h3>GitHub</h3>
+          <p>Open-source work, including eco-evolutionary population models in Clojure and Python.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="photos" aria-labelledby="photos-title">
+    <div class="photos-head">
+      <div>
+        <h2 id="photos-title">Wildlife photography</h2>
+        <p>From far away and close to home.</p>
+      </div>
+      <a class="more" href="/photos">See all photographs <span aria-hidden="true">→</span></a>
     </div>
-    <ul class="gallery">
-      <li class="w6"><figure style="margin:0"><button data-full="img/pika.jpg" aria-label="Open: Pika"><img src="img/pika.jpg" alt="An American pika in the alpine tundra of Colorado" style="--ar:16/9" loading="lazy"></button><figcaption>American pika</figcaption></figure></li>
-      <li class="w4"><figure style="margin:0"><button data-full="img/cubs.jpg" aria-label="Open: Lion cubs"><img src="img/cubs.jpg" alt="Two lion cubs curled together in the grass, one looking straight at the camera" style="--ar:3/2" loading="lazy"></button><figcaption>Lion cubs</figcaption></figure></li>
-      <li class="w2"><figure style="margin:0"><button data-full="img/roller.jpg" aria-label="Open: Lilac-breasted roller"><img src="img/roller.jpg" alt="A lilac-breasted roller perched on a thorny branch against dry grass" style="--ar:3/4;object-position:25% 50%" loading="lazy"></button><figcaption>Lilac-breasted roller</figcaption></figure></li>
-      <li class="w3"><figure style="margin:0"><button data-full="img/hippo.jpg" aria-label="Open: Hippopotamus"><img src="img/hippo.jpg" alt="A hippopotamus in the water with its mouth wide open, tusks showing" style="--ar:4/3" loading="lazy"></button><figcaption>Hippopotamus</figcaption></figure></li>
-      <li class="w3"><figure style="margin:0"><button data-full="img/fox.jpg" aria-label="Open: Red fox"><img src="img/fox.jpg" alt="A red fox standing in green grass, looking back at the camera" style="--ar:4/3" loading="lazy"></button><figcaption>Red fox</figcaption></figure></li>
-      <li class="w2"><figure style="margin:0"><button data-full="img/silver-fox.jpg" aria-label="Open: Silver fox"><img src="img/silver-fox.jpg" alt="A silver fox sitting on a gravel path" style="--ar:3/4" loading="lazy"></button><figcaption>Silver fox</figcaption></figure></li>
-      <li class="w4"><figure style="margin:0"><button data-full="img/foxes-grooming.jpg" aria-label="Open: Foxes grooming"><img src="img/foxes-grooming.jpg" alt="Two subadult foxes, one grooming the other after a storm." style="--ar:3/2" loading="lazy"></button><figcaption>Subadult foxes grooming</figcaption></figure></li>
-      <li class="w4"><figure style="margin:0"><button data-full="img/monk-seals.jpg" aria-label="Open: Monk seals"><img src="img/monk-seals.jpg" alt="Two monk seals nose to nose on a sandy beach at the water's edge" style="--ar:3/2" loading="lazy"></button><figcaption>Monk seals</figcaption></figure></li>
-      <li class="w2"><figure style="margin:0"><button data-full="img/crater-lion.jpg" aria-label="Open: Lion beneath the crater rim"><img src="img/crater-lion.jpg" alt="A lion sitting in dry grass beneath a cloud-covered crater wall" style="--ar:3/4;object-position:28% 50%" loading="lazy"></button><figcaption>Lion beneath the crater rim</figcaption></figure></li>
+    <ul class="teaser">
+      <li class="lead-photo">
+        <a href="/photos">
+          <img src="img/pika.jpg" alt="An American pika in the alpine tundra of Colorado" loading="lazy">
+          <span class="cap">American pika</span>
+        </a>
+      </li>
+      <li>
+        <a href="/photos">
+          <img src="img/cubs.jpg" alt="Two lion cubs curled together in the grass, one looking straight at the camera" loading="lazy" style="object-position: 65% 45%">
+          <span class="cap">Lion cubs</span>
+        </a>
+      </li>
+      <li>
+        <a href="/photos">
+          <img src="img/fox.jpg" alt="A red fox standing in green grass, looking back at the camera" loading="lazy" style="object-position: 15% 50%">
+          <span class="cap">Red fox</span>
+        </a>
+      </li>
     </ul>
   </section>
 </main>
@@ -179,25 +319,5 @@
   <span>Photographs © Levi Skye Morris</span>
 </footer>
 
-<dialog id="lightbox" aria-label="Photograph">
-  <img id="lb-img" alt="">
-  <p><span id="lb-cap"></span><button id="lb-close">Close</button></p>
-</dialog>
-
-<script>
-  const dlg = document.getElementById('lightbox');
-  const img = document.getElementById('lb-img');
-  const cap = document.getElementById('lb-cap');
-  document.querySelectorAll('.gallery button').forEach(b => {
-    b.addEventListener('click', () => {
-      const thumb = b.querySelector('img');
-      img.src = b.dataset.full; img.alt = thumb.alt;
-      cap.textContent = b.closest('figure').querySelector('figcaption').textContent;
-      dlg.showModal();
-    });
-  });
-  document.getElementById('lb-close').addEventListener('click', () => dlg.close());
-  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
-</script>
 </body>
 </html>
