@@ -248,25 +248,34 @@
     .gallery li.w4, .gallery li.w3, .gallery li.w2 { grid-column: span 2; }
   }
 
-  .topbar { max-width: 1180px; margin: 0 auto; padding: 1.25rem clamp(16px, 4vw, 48px); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--rule); }
-  .topbar .name { color: var(--fg); text-decoration: none; font-weight: 500; font-size: 1.15rem; }
-  .topbar nav { display: flex; gap: 1.25rem; font-size: 1rem; }
-  .topbar nav a { text-decoration: none; }
-  .topbar nav a[aria-current="page"] { color: var(--grass); }
   .page-head { padding: clamp(40px, 7vw, 80px) 0 1.5rem; }
   .page-head h1 { margin: 0; font-weight: 350; letter-spacing: -0.02em; line-height: 1; font-size: clamp(2.4rem, 6vw, 4.5rem); }
   .page-head p { max-width: 40rem; margin: 0.9rem 0 0; color: var(--muted); }
+
+  /* shared site header */
+  .site-nav { font-family: "Literata", Georgia, serif; }
+  .site-nav .bar { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap; padding-block: 1.25rem; border-bottom: 1px solid var(--nav-rule); }
+  .site-nav .name { color: var(--nav-ink); text-decoration: none; font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; }
+  .site-nav nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 1.02rem; line-height: 1.4; }
+  .site-nav nav a { color: var(--nav-ink); opacity: 0.8; text-decoration: none; text-underline-offset: 0.3em; text-decoration-thickness: 1px; }
+  .site-nav nav a:hover, .site-nav nav a[aria-current="page"] { opacity: 1; text-decoration-line: underline; }
+  :root { --nav-ink: var(--fg); --nav-rule: var(--rule); }
+  .site-nav { padding-inline: clamp(16px, 4vw, 48px); }
+  .site-nav .bar { max-width: 1180px; margin: 0 auto; }
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <a class="name" href="/">Levi Skye Morris</a>
-  <nav aria-label="Primary">
-    <a href="/">Home</a>
-    <a href="/cv">CV</a>
-    <a href="/photos" aria-current="page">Photography</a>
-  </nav>
+<header class="site-nav">
+  <div class="bar">
+    <a class="name" href="/">Levi Skye Morris</a>
+    <nav aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/cv">CV</a>
+      <a href="/photos" aria-current="page">Photography</a>
+      <a href="https://github.com/siromivel" rel="me">GitHub</a>
+    </nav>
+  </div>
 </header>
 
 <main>
