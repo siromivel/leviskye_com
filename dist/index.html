@@ -210,7 +210,7 @@
   }
 
   /* shared site header */
-  .site-nav { font-family: "Literata", Georgia, serif; }
+  .site-nav { font-family: "Literata", Georgia, serif; line-height: 1.4; }
   .site-nav .bar { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap; padding-block: 1.25rem; border-bottom: 1px solid var(--nav-rule); }
   .site-nav .name { color: var(--nav-ink); text-decoration: none; font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; }
   .site-nav nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 1.02rem; line-height: 1.4; }
@@ -221,8 +221,8 @@
   .site-nav .bar { max-width: 1180px; margin: 0 auto; }
   /* home: header floats transparently over the hero photo */
   .site-nav.overlay { position: absolute; top: 0; left: 0; right: 0; z-index: 2; --nav-ink: #1f2a26; }
-  .site-nav.overlay .bar { border-bottom: 0; justify-content: flex-end; }
-  .site-nav.overlay .name { display: none; }
+  .site-nav.overlay .bar { border-bottom-color: transparent; }
+  .site-nav.overlay .name { visibility: hidden; }
 </style>
 </head>
 <body>
@@ -342,7 +342,7 @@
 </main>
 
 <footer>
-  <span>Boulder County, Colorado</span>
+  <span>Built with love in Boulder County, Colorado</span>
   <span>Photographs © Levi Skye Morris</span>
 </footer>
 
