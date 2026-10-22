@@ -13,6 +13,7 @@
 <meta property="og:image:alt" content="A lion sitting in dry grass beneath a cloud-covered crater wall">
 <meta property="og:url" content="https://leviskye.com/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#e9ece9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,6 +85,7 @@
 </script>
 <style>
   :root {
+    color-scheme: light dark;
     --cloud: #e9ece9;      /* the cloud bank */
     --paper: #f5f6f4;
     --slate: #26312d;      /* crater slope in shadow */
@@ -132,7 +134,7 @@
     font-size: clamp(2.8rem, 8.5vw, 7.5rem);
   }
   .hero-text p {
-    margin: 0.6em 0 0; max-width: 32ch; color: #2d3934; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.4;
+    margin: 1em 0 0 1em; max-width: 48ch; color: #2d3934; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.4;
   }
   .credit {
     position: absolute; right: clamp(16px, 4vw, 48px); bottom: 14px; margin: 0;
@@ -221,6 +223,9 @@
   .site-nav .bar { max-width: 1180px; margin: 0 auto; }
   /* home: header floats transparently over the hero photo */
   .site-nav.overlay { position: absolute; top: 0; left: 0; right: 0; z-index: 2; --nav-ink: #1f2a26; }
+  @media (max-width: 760px) {
+    .site-nav.overlay .name { display: none; }
+  }
   .site-nav.overlay .bar { border-bottom-color: transparent; }
   .site-nav.overlay .name { visibility: hidden; }
 </style>
@@ -245,7 +250,6 @@
     <h1>Levi Skye Morris</h1>
     <p>Engineering leader, founder and wildlife photographer in Boulder County, Colorado.</p>
   </div>
-  <p class="credit">Lion beneath the crater rim</p>
 </div>
 
 <main>

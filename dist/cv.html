@@ -7,6 +7,7 @@
       name="description"
       content="Curriculum vitae for Levi Skye Morris, an engineering leader, staff and principal engineer and former CTO building compliant, data-intensive systems across health care, e-commerce, payments and geospatial domains, based in Boulder, Colorado."
     >
+    <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f5f6f4">
     <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,400&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://leviskye.com/cv">
@@ -262,7 +263,7 @@
 
       .titles {
         display: grid;
-        grid-template-columns: max-content auto;
+        grid-template-columns: minmax(0, 1fr) auto;
         align-items: baseline;
         gap: 0.1rem 1.5rem;
         margin: 0.5rem 0 0;
@@ -283,6 +284,8 @@
       }
 
       .titles time {
+        justify-self: end;
+        text-align: right;
         font-weight: 400;
         font-variant-numeric: tabular-nums;
         color: var(--muted);
@@ -375,6 +378,11 @@
 
         .titles li + li span {
           margin-top: 0.35rem;
+        }
+
+        .titles time {
+          justify-self: start;
+          text-align: left;
         }
       }
 
